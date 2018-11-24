@@ -45,7 +45,30 @@ exports.finishSignUp = functions.https.onCall((data, context) => {
 	console.log(enduser_id);
 });
 
+exports.finishSignUp = functions.https.onRequest((req, res) => {
+	//create RB account and store enduser_id to FireBase
+	request.post(
+		{
+			url: 'https://play.railsbank.com/v1/customer/endusers',
+			formData: {
+				person: {
+					name: req.query.name,
+					telephone: req.query.phoneNumber,
+				},
+			},
+		},
+		function(error, response, body) {
+			if (err) {
+				return console.error('failed:', err);
+			}
+            
+            res.send(body);
+		},
+	);
+});
+
 exports.railsbankWebhook = functions.https.onRequest((req, res) => {
+    req.query.name
 	console.log(req.body);
 	// should have ledger id and tx id
 	// import all ledger txs into firebase again
