@@ -83,7 +83,7 @@ async function refreshLedger(phoneNumber, ledger_id) {
 
 async function refreshTransactions(ledger_id) {
 	let response = await request.get({
-		url: 'https://play.railsbank.com/v1/customer/transactions' + ledger_id,
+		url: 'https://play.railsbank.com/v1/customer/transactions',
 		headers: {
 			Authorization:
 				'API-Key l0mvqwv9zvpg4s8aup5376475b6wtg0i#x0xhdvqsdahmoczcdu8g1k2dsrhl7gcdu107962gookg31uddosslqa2v3oe8f14',
@@ -94,15 +94,15 @@ async function refreshTransactions(ledger_id) {
 
 	console.log('rasp status code=', response.statusCode || response.status);
 	console.log(response.body);
-    
-    extractedResponse = [];
-    
-    for(int i = 0; i < response.body.length; i++) {
-        if(response.body[i].ledger_from_id === ledger_id || response.body[i].ledger_to_id === ledger_id) {
-            extractedResponse.push(response.body[i]);
-        }
-    }
-    
+
+	const extractedResponse = [];
+
+	for (let i = 0; i < response.body.length; i++) {
+		if (response.body[i].ledger_from_id === ledger_id || response.body[i].ledger_to_id === ledger_id) {
+			extractedResponse.push(response.body[i]);
+		}
+	}
+
 	await db
 		.ref('users')
 		.child(phoneNumber)
