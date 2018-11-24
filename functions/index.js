@@ -22,19 +22,32 @@ exports.sendMobileCode = functions.https.onCall((data, context) => {
 
 exports.finishSignUp = functions.https.onCall((data, context) => {
 	var enduser_id;
-    //create RB account and store enduser_id to FireBase
-    request.post({url:'https://play.railsbank.com/v1/customer/endusers', formData: {
-        person: {
-            name: data.name,
-            telephone: data.phoneNumber
-        }
-    }}, function (error, response, body) {
-        if (err) {
-            return console.error('failed:', err);
-        }
-        
-        enduser_id = body;
-    });
-    
-    console.log(enduser_id);
+	//create RB account and store enduser_id to FireBase
+	request.post(
+		{
+			url: 'https://play.railsbank.com/v1/customer/endusers',
+			formData: {
+				person: {
+					name: data.name,
+					telephone: data.phoneNumber,
+				},
+			},
+		},
+		function(error, response, body) {
+			if (err) {
+				return console.error('failed:', err);
+			}
+
+			enduser_id = body;
+		},
+	);
+
+	console.log(enduser_id);
+});
+
+exports.railsbankWebhook = functions.https.onRequest((req, res) => {
+	console.log(req.body);
+	// should have ledger id and tx id
+	// import all ledger txs into firebase again
+	return 'ok';
 });
