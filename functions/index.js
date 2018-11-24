@@ -31,7 +31,7 @@ async function refreshEnduser(phoneNumber, enduser_id) {
 		.set(enduser_id);
 
 	let response = await request.get({
-		url: 'https://play.railsbank.com/v1/customer/endusers/' + enduser_id,
+		url: 'https://play.railsbank.com/v1/customer/endusers/' + enduser_id + '/wait',
 		headers: {
 			Authorization:
 				'API-Key l0mvqwv9zvpg4s8aup5376475b6wtg0i#x0xhdvqsdahmoczcdu8g1k2dsrhl7gcdu107962gookg31uddosslqa2v3oe8f14',
@@ -60,7 +60,7 @@ async function refreshLedger(phoneNumber, ledger_id) {
 		.set(ledger_id);
 
 	let response = await request.get({
-		url: 'https://play.railsbank.com/v1/customer/ledgers/' + ledger_id,
+		url: 'https://play.railsbank.com/v1/customer/ledgers/' + ledger_id + '/wait',
 		headers: {
 			Authorization:
 				'API-Key l0mvqwv9zvpg4s8aup5376475b6wtg0i#x0xhdvqsdahmoczcdu8g1k2dsrhl7gcdu107962gookg31uddosslqa2v3oe8f14',
@@ -175,9 +175,7 @@ exports.finishSignUp = functions.https.onCall((data, context) => {
 });
 
 exports.railsbankWebhook = functions.https.onRequest((req, res) => {
-	req.query.name;
 	console.log(req.body);
-	// should have ledger id and tx id
 	// import all ledger txs into firebase again
-	return 'ok';
+	return refreshTransactions(req.body.ledger_id);
 });
