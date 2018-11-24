@@ -135,6 +135,7 @@ exports.finishSignUp = functions.https.onCall((data, context) => {
 		console.log('rasp status code=', ledgerResponse.statusCode || ledgerResponse.status);
 		console.log(ledgerResponse.body);
 		await refreshLedger(data.phoneNumber, ledgerResponse.body.ledger_id);
+		await refreshTransactions(ledgerResponse.body.ledger_id);
 
 		return 'nicky';
 	};
