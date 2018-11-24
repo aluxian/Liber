@@ -166,9 +166,82 @@ exports.finishSignUp = functions.https.onCall((data, context) => {
 		console.log('rasp status code=', ledgerResponse.statusCode || ledgerResponse.status);
 		console.log(ledgerResponse.body);
 		await refreshLedger(data.phoneNumber, ledgerResponse.body.ledger_id);
-		await refreshTransactions(ledgerResponse.body.ledger_id);
+		// await refreshTransactions(ledgerResponse.body.ledger_id);
 
 		return 'nicky';
+	};
+
+	return exec();
+});
+
+async function refreshPayment(amount, ledger_id, beneficiary_id, phoneNumber) {
+	let response = await request.post({
+		url: 'https://play.railsbank.com/v1/customer/transactions',
+		body: {
+            amount: amount,
+            beneficiary_id: beneficiary_id,
+            ledger_from_id: ledger_id,
+            payment_type: 'payment-type-UK-FasterPayments'
+        },
+        headers: {
+			Authorization:
+				'API-Key l0mvqwv9zvpg4s8aup5376475b6wtg0i#x0xhdvqsdahmoczcdu8g1k2dsrhl7gcdu107962gookg31uddosslqa2v3oe8f14',
+		},
+		json: true,
+		resolveWithFullResponse: true,
+	});
+
+	console.log('rasp status code=', response.statusCode || response.status);
+	console.log(response.body);
+
+	await db
+		.ref('users')
+		.child(phoneNumber)
+		.child('transactions')
+		.push()
+        .set(response.body.transaction_id);
+
+	console.log('refreshpayment success');
+}
+
+function createBeneficiary(data, enduser_id) {
+	return request.post({
+		url: 'https://play.railsbank.com/v1/customer/beneficiaries',
+		body: {
+			asset_class: 'currency',
+			asset_type: 'gbp',
+			holder_id: enduser_id,
+            person: {
+                name: data.name,
+            }
+            uk_account_number: data.accno,
+            uk_sort_code: data.sortcode
+        },
+		headers: {
+			Authorization:
+				'API-Key l0mvqwv9zvpg4s8aup5376475b6wtg0i#x0xhdvqsdahmoczcdu8g1k2dsrhl7gcdu107962gookg31uddosslqa2v3oe8f14',
+		},
+		json: true,
+		resolveWithFullResponse: true,
+	});
+}
+
+exports.withdraw = functions.https.onCall((data, context) => {
+	const exec = async function() {
+		const response = await db
+                             .ref('users')
+                             .child(data.phoneNumber)
+                             .once('value');
+
+        const beneficiaryResponse = await createBeneficiary(data, response.enduser_id);
+        console.log('rasp status code=', beneficiaryResponse.statusCode || beneficiaryResponse.status);
+		console.log(beneficiaryResponse.body);
+        
+        const beneficiary_id = beneficiaryResponse.body.beneficiary_id;
+        
+        await refreshPayment(data.amount, response.value.ledger_id, beneficiary_id, data.phoneNumber);
+        
+		return 'alex';
 	};
 
 	return exec();
