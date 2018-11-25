@@ -274,6 +274,86 @@ exports.withdraw = functions.https.onCall((data, context) => {
 	return exec();
 });
 
+exports.instruments = functions.https.onCall((data, context) => {
+	const exec = async function() {
+        const response = return request.get({
+            url: 'https://aprexocoreapiuk3.azurewebsites.net/api/v1/Instrument',
+            headers: {
+                Authorization:
+                    'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IndVTG1ZZnNxZFF1V3RWXy1oeFZ0REpKWk00USIsImtpZCI6IndVTG1ZZnNxZFF1V3RWXy1oeFZ0REpKWk00USJ9.eyJhdWQiOiI2ZThlZjRlNS1iY2JjLTRlYzYtODU3Ni1lMGQ1MzkwYjRkOGUiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9kYmMwYjNkNy0yY2QwLTQwMDUtYTY5YS03OGJhZTA1MzA5NzgvIiwiaWF0IjoxNTQzMTE5MjExLCJuYmYiOjE1NDMxMTkyMTEsImV4cCI6MTU0MzEyMzExMSwiYWNyIjoiMSIsImFpbyI6IjQyUmdZSmlXdlRJMDZKUkZZNE9kN3NUVWxDT0NjeTkwR01rV2I3Zi9ZdEZwL1RqSFZCQUEiLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiNzFkNmUxY2MtNWRhYi00NjZiLTk0MTQtN2JmODg1ZDliYWM2IiwiYXBwaWRhY3IiOiIwIiwiZmFtaWx5X25hbWUiOiJoYWNrYXRob24yMDE4IiwiaXBhZGRyIjoiMTkzLjYwLjc5LjE2OSIsIm5hbWUiOiJoYWNrYXRob24yMDE4Iiwib2lkIjoiYTdhYTE3M2UtMzdmOS00ZGQxLTgwMDMtMzRmY2EwMzI5OGUyIiwic2NwIjoidXNlcl9pbXBlcnNvbmF0aW9uIiwic3ViIjoieUVTZ3RWXzdZYVRpV0xlUDlDOGZkQmFVT0I3OGRBN0Jmdlk5SEtnMTVhZyIsInRpZCI6ImRiYzBiM2Q3LTJjZDAtNDAwNS1hNjlhLTc4YmFlMDUzMDk3OCIsInVuaXF1ZV9uYW1lIjoiaGFja2F0aG9uMjAxOEBhcHJleG8uY29tIiwidXBuIjoiaGFja2F0aG9uMjAxOEBhcHJleG8uY29tIiwidXRpIjoiOUdUQU9pNGc1VW1ZM1NTdU5ZN1FBQSIsInZlciI6IjEuMCJ9.fEQywTxL5vAWX0Caaglx2YXLfZ7kd33uhITWDzGT3Jr8p19pXd_OZVnXsfGmWSfc-SJ9tmN2_g2aPB3uKrOgL6UsqOV6fPbTIACBdfeLN8Rqqi_vg6LDY0zpyjsMZ7afjRRg3ng9I57BjtwQk_DuzWhQQiuWWMRfOhL5Znt8FZTtNz4Kn-QwpwKAtGvh9urnIkOXZooXl29CYOmkeKPHCjS1rkLt6VIQ9L-Ql_8OoCF9tpV6F99O1x9xYI-fDqEWVRPf4tw2kfGE2eFEgl4KoYGA3bzjqRGW2FBFP-4zHiHi0v3aJBf-y_8K4wjrREMVQETg7JbB7VMDo5Tp3NNTFQ',
+            },
+            json: true,
+            resolveWithFullResponse: true,
+        });
+        
+        console.log('rasp status code=', response.statusCode || response.status);
+	    console.log(response.body);
+        
+        let instruments = []
+        
+        for(let i = 0; i < response.body.length; i++) {
+            if(response.body[i].id === "CASH.GBP") {
+                inst = {
+                    ticker: response.body[i].id,
+                    name: response.body[i].name,
+                    risk: 0
+                };
+                instruments[i] = inst;
+                continue;
+            }
+            let type = response.body[i].id.split(".")[0];
+            if(type === "CRYPT") {
+                inst = {
+                    ticker: response.body[i].id,
+                    name: response.body[i].name,
+                    risk: 8
+                };
+            } else if(type === "COM") {
+                inst = {
+                    ticker: response.body[i].id,
+                    name: response.body[i].name,
+                    risk: 3
+                };
+            } else if(type === "CASH") {
+                inst = {
+                    ticker: response.body[i].id,
+                    name: response.body[i].name,
+                    risk: 1
+                };
+            } else if(type === "BOND") {
+                inst = {
+                    ticker: response.body[i].id,
+                    name: response.body[i].name,
+                    risk: 2
+                };
+            } else if(type === "FX") {
+                inst = {
+                    ticker: response.body[i].id,
+                    name: response.body[i].name,
+                    risk: 2
+                };
+            } else if(type === "EQUITY") {
+                inst = {
+                    ticker: response.body[i].id,
+                    name: response.body[i].name,
+                    risk: 4
+                };
+            }
+            
+            instruments[i] = inst;
+        }
+        
+        await db
+			.ref('instruments')
+			.set(instruments);
+        
+		return 'alex';
+	};
+
+	return exec();
+});
+
+
 exports.railsbankWebhook = functions.https.onRequest((req, res) => {
 	console.log(req.body);
 	// import all ledger txs into firebase again
