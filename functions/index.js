@@ -274,85 +274,223 @@ exports.withdraw = functions.https.onCall((data, context) => {
 	return exec();
 });
 
-exports.instruments = functions.https.onCall((data, context) => {
+exports.importAprexo = functions.https.onRequest((req, res) => {
 	const exec = async function() {
-        const response = return request.get({
-            url: 'https://aprexocoreapiuk3.azurewebsites.net/api/v1/Instrument',
-            headers: {
-                Authorization:
-                    'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IndVTG1ZZnNxZFF1V3RWXy1oeFZ0REpKWk00USIsImtpZCI6IndVTG1ZZnNxZFF1V3RWXy1oeFZ0REpKWk00USJ9.eyJhdWQiOiI2ZThlZjRlNS1iY2JjLTRlYzYtODU3Ni1lMGQ1MzkwYjRkOGUiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9kYmMwYjNkNy0yY2QwLTQwMDUtYTY5YS03OGJhZTA1MzA5NzgvIiwiaWF0IjoxNTQzMTE5MjExLCJuYmYiOjE1NDMxMTkyMTEsImV4cCI6MTU0MzEyMzExMSwiYWNyIjoiMSIsImFpbyI6IjQyUmdZSmlXdlRJMDZKUkZZNE9kN3NUVWxDT0NjeTkwR01rV2I3Zi9ZdEZwL1RqSFZCQUEiLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiNzFkNmUxY2MtNWRhYi00NjZiLTk0MTQtN2JmODg1ZDliYWM2IiwiYXBwaWRhY3IiOiIwIiwiZmFtaWx5X25hbWUiOiJoYWNrYXRob24yMDE4IiwiaXBhZGRyIjoiMTkzLjYwLjc5LjE2OSIsIm5hbWUiOiJoYWNrYXRob24yMDE4Iiwib2lkIjoiYTdhYTE3M2UtMzdmOS00ZGQxLTgwMDMtMzRmY2EwMzI5OGUyIiwic2NwIjoidXNlcl9pbXBlcnNvbmF0aW9uIiwic3ViIjoieUVTZ3RWXzdZYVRpV0xlUDlDOGZkQmFVT0I3OGRBN0Jmdlk5SEtnMTVhZyIsInRpZCI6ImRiYzBiM2Q3LTJjZDAtNDAwNS1hNjlhLTc4YmFlMDUzMDk3OCIsInVuaXF1ZV9uYW1lIjoiaGFja2F0aG9uMjAxOEBhcHJleG8uY29tIiwidXBuIjoiaGFja2F0aG9uMjAxOEBhcHJleG8uY29tIiwidXRpIjoiOUdUQU9pNGc1VW1ZM1NTdU5ZN1FBQSIsInZlciI6IjEuMCJ9.fEQywTxL5vAWX0Caaglx2YXLfZ7kd33uhITWDzGT3Jr8p19pXd_OZVnXsfGmWSfc-SJ9tmN2_g2aPB3uKrOgL6UsqOV6fPbTIACBdfeLN8Rqqi_vg6LDY0zpyjsMZ7afjRRg3ng9I57BjtwQk_DuzWhQQiuWWMRfOhL5Znt8FZTtNz4Kn-QwpwKAtGvh9urnIkOXZooXl29CYOmkeKPHCjS1rkLt6VIQ9L-Ql_8OoCF9tpV6F99O1x9xYI-fDqEWVRPf4tw2kfGE2eFEgl4KoYGA3bzjqRGW2FBFP-4zHiHi0v3aJBf-y_8K4wjrREMVQETg7JbB7VMDo5Tp3NNTFQ',
-            },
-            json: true,
-            resolveWithFullResponse: true,
-        });
-        
-        console.log('rasp status code=', response.statusCode || response.status);
-	    console.log(response.body);
-        
-        let instruments = []
-        
-        for(let i = 0; i < response.body.length; i++) {
-            if(response.body[i].id === "CASH.GBP") {
-                inst = {
-                    ticker: response.body[i].id,
-                    name: response.body[i].name,
-                    risk: 0
-                };
-                instruments[i] = inst;
-                continue;
-            }
-            let type = response.body[i].id.split(".")[0];
-            if(type === "CRYPT") {
-                inst = {
-                    ticker: response.body[i].id,
-                    name: response.body[i].name,
-                    risk: 8
-                };
-            } else if(type === "COM") {
-                inst = {
-                    ticker: response.body[i].id,
-                    name: response.body[i].name,
-                    risk: 3
-                };
-            } else if(type === "CASH") {
-                inst = {
-                    ticker: response.body[i].id,
-                    name: response.body[i].name,
-                    risk: 1
-                };
-            } else if(type === "BOND") {
-                inst = {
-                    ticker: response.body[i].id,
-                    name: response.body[i].name,
-                    risk: 2
-                };
-            } else if(type === "FX") {
-                inst = {
-                    ticker: response.body[i].id,
-                    name: response.body[i].name,
-                    risk: 2
-                };
-            } else if(type === "EQUITY") {
-                inst = {
-                    ticker: response.body[i].id,
-                    name: response.body[i].name,
-                    risk: 4
-                };
-            }
-            
-            instruments[i] = inst;
-        }
-        
-        await db
-			.ref('instruments')
-			.set(instruments);
-        
+		const response = await request.get({
+			url: 'https://aprexocoreapiuk3.azurewebsites.net/api/v1/Instrument',
+			headers: {
+				Authorization:
+					'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IndVTG1ZZnNxZFF1V3RWXy1oeFZ0REpKWk00USIsImtpZCI6IndVTG1ZZnNxZFF1V3RWXy1oeFZ0REpKWk00USJ9.eyJhdWQiOiI2ZThlZjRlNS1iY2JjLTRlYzYtODU3Ni1lMGQ1MzkwYjRkOGUiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9kYmMwYjNkNy0yY2QwLTQwMDUtYTY5YS03OGJhZTA1MzA5NzgvIiwiaWF0IjoxNTQzMTIzMzg5LCJuYmYiOjE1NDMxMjMzODksImV4cCI6MTU0MzEyNzI4OSwiYWNyIjoiMSIsImFpbyI6IkFTUUEyLzhKQUFBQXJTdkxySnJSRi9QbkdudFVaT1hUaXc4WkhJR3VtOVlycDAzQ3RDM3A4N2s9IiwiYW1yIjpbInB3ZCJdLCJhcHBpZCI6IjcxZDZlMWNjLTVkYWItNDY2Yi05NDE0LTdiZjg4NWQ5YmFjNiIsImFwcGlkYWNyIjoiMCIsImZhbWlseV9uYW1lIjoiaGFja2F0aG9uMjAxOCIsImlwYWRkciI6IjE5My42MC43OS4xNzAiLCJuYW1lIjoiaGFja2F0aG9uMjAxOCIsIm9pZCI6ImE3YWExNzNlLTM3ZjktNGRkMS04MDAzLTM0ZmNhMDMyOThlMiIsInNjcCI6InVzZXJfaW1wZXJzb25hdGlvbiIsInN1YiI6InlFU2d0Vl83WWFUaVdMZVA5QzhmZEJhVU9CNzhkQTdCZnZZOUhLZzE1YWciLCJ0aWQiOiJkYmMwYjNkNy0yY2QwLTQwMDUtYTY5YS03OGJhZTA1MzA5NzgiLCJ1bmlxdWVfbmFtZSI6ImhhY2thdGhvbjIwMThAYXByZXhvLmNvbSIsInVwbiI6ImhhY2thdGhvbjIwMThAYXByZXhvLmNvbSIsInV0aSI6ImZzSmd4ZDNiS0VDMEFGY2xkVGItQUEiLCJ2ZXIiOiIxLjAifQ.D_cbDVlceMCn_Ie8qWhT-F2_PnbJy8tGrn-KgCh_iojXaN7VLlS7tbLzfZXFCoDxp3GkRwmH7WurCpJHcsqhdHZUSn7Hnik1fAbH98FIFuDt0KFQpULUg7HSS1XGqH_rObbnTAsWgy8KqkeD9kqy4CzSDyOoll-ZfyOTKZANqlVncy2yj5MzrCmcmSmT5VgnUUcj2RJuh9CerUNUSskRNd-DOjVUjZMbGrAEOVzwT6iSXt7Z0Ou4rb1wLSIztFAgyTVMP2K5lLQnhMfcpkFO-eNt4a6-J3Pzz-y4FB3EK6PEs_8U5O02GaSA8Ip92fPozaK9QEDc5U0p5bdTrlLsFQ',
+			},
+			json: true,
+			resolveWithFullResponse: true,
+		});
+
+		console.log('rasp status code=', response.statusCode || response.status);
+		console.log(response.body);
+
+		let instruments = [];
+
+		for (let i = 0; i < response.body.length; i++) {
+			let inst = null;
+
+			if (response.body[i].id === 'CASH.GBP') {
+				inst = {
+					ticker: response.body[i].id.replace('.', '_'),
+					sym: response.body[i].id.split('.')[1],
+					cls: response.body[i].id.split('.')[0],
+					name: response.body[i].name,
+					risk: 0,
+				};
+				instruments.push(inst);
+				continue;
+			}
+			let type = response.body[i].id.split('.')[0];
+			if (type === 'CRYPT') {
+				inst = {
+					ticker: response.body[i].id.replace('.', '_'),
+					sym: response.body[i].id.split('.')[1],
+					cls: response.body[i].id.split('.')[0],
+					name: response.body[i].name,
+					risk: 8,
+				};
+			} else if (type === 'COM') {
+				inst = {
+					ticker: response.body[i].id.replace('.', '_'),
+					sym: response.body[i].id.split('.')[1],
+					cls: response.body[i].id.split('.')[0],
+					name: response.body[i].name,
+					risk: 3,
+				};
+			} else if (type === 'CASH') {
+				inst = {
+					ticker: response.body[i].id.replace('.', '_'),
+					sym: response.body[i].id.split('.')[1],
+					cls: response.body[i].id.split('.')[0],
+					name: response.body[i].name,
+					risk: 1,
+				};
+			} else if (type === 'BOND') {
+				inst = {
+					ticker: response.body[i].id.replace('.', '_'),
+					sym: response.body[i].id.split('.')[1],
+					cls: response.body[i].id.split('.')[0],
+					name: response.body[i].name,
+					risk: 2,
+				};
+			} else if (type === 'FX') {
+				inst = {
+					ticker: response.body[i].id.replace('.', '_'),
+					sym: response.body[i].id.split('.')[1],
+					cls: response.body[i].id.split('.')[0],
+					name: response.body[i].name,
+					risk: 2,
+				};
+			} else if (type === 'EQUITY') {
+				inst = {
+					ticker: response.body[i].id.replace('.', '_'),
+					sym: response.body[i].id.split('.')[1],
+					cls: response.body[i].id.split('.')[0],
+					name: response.body[i].name,
+					risk: 5,
+				};
+			}
+
+			if (inst) {
+				instruments.push(inst);
+			}
+		}
+
+		await db.ref('instruments').set(instruments);
+
 		return 'alex';
 	};
 
-	return exec();
+	exec()
+		.then(() => res.send('ok'))
+		.catch((err) => {
+			console.log(err);
+			res.send('error');
+		});
 });
 
+async function getBtcPrice() {
+	const response = await request.get({
+		url: 'https://api.coindesk.com/v1/bpi/currentprice.json',
+		json: true,
+		resolveWithFullResponse: true,
+	});
+
+	// console.log('rasp status code=', response.statusCode || response.status);
+	// console.log(response.body);
+
+	//find the bitcoin key and then change the value
+	// console.log(response.body.bpi.GBP);
+	return parseFloat(response.body.bpi.GBP.rate.replace(',', ''));
+}
+
+exports.continuouslyUpdateBtcAmount = functions.https.onRequest((req, res) => {
+	const exec = async function() {
+		while (1) {
+			await new Promise(function(resolve) {
+				setTimeout(resolve, 3000);
+			});
+
+			let s = await db
+				.ref('users')
+				.child(req.query.phoneNumber)
+				.child('amounts')
+				.child('CRYPT_BTC')
+				.once('value');
+
+			const prev_amount_btc = s.val();
+
+			s = await db
+				.ref('instruments')
+				.child('19')
+				.child('value')
+				.once('value');
+
+			const prev_rate_btc = s.val();
+
+			const new_price = await getBtcPrice();
+
+			const new_amount = (prev_amount_btc * new_price) / prev_rate_btc;
+
+			await db
+				.ref('users')
+				.child(req.query.phoneNumber)
+				.child('amounts')
+				.child('CRYPT_BTC')
+				.set(new_amount);
+
+			await db
+				.ref('instruments')
+				.child('19')
+				.child('value')
+				.set(new_price);
+
+			s = await db
+				.ref('users')
+				.child(req.query.phoneNumber)
+				.child('amounts')
+				.once('value');
+			const all_amounts = s.val();
+			const total_value = Object.values(all_amounts).reduce(function(acc, nv) {
+				return acc + nv;
+			}, 0);
+
+			await db
+				.ref('users')
+				.child(req.query.phoneNumber)
+				.child('valuation_chart')
+				.push()
+				.set({
+					timestamp: Date.now(),
+					value: total_value,
+				});
+		}
+
+		return 'alex';
+	};
+
+	exec()
+		.then(() => res.send('ok'))
+		.catch((err) => {
+			console.log(err);
+			res.send('error');
+		});
+});
+
+exports.liveBitcoin = functions.https.onRequest((req, res) => {
+	const exec = async function() {
+		const response = await request.get({
+			url: 'https://api.coindesk.com/v1/bpi/currentprice.json',
+			json: true,
+			resolveWithFullResponse: true,
+		});
+
+		console.log('rasp status code=', response.statusCode || response.status);
+		console.log(response.body);
+
+		//find the bitcoin key and then change the value
+
+		await db
+			.ref('instruments')
+			.child('19')
+			.child('value')
+			.set(parseFloat(response.body.GBP.rate));
+
+		return 'alex';
+	};
+
+	exec()
+		.then(() => res.send('ok'))
+		.catch((err) => {
+			console.log(err);
+			res.send('error');
+		});
+});
 
 exports.railsbankWebhook = functions.https.onRequest((req, res) => {
 	console.log(req.body);
@@ -381,6 +519,69 @@ exports.railsbankWebhook = functions.https.onRequest((req, res) => {
 			]);
 		} else {
 			console.warn('phone number is null ');
+		}
+
+		if (req.body.transaction_id) {
+			const tx_response = await request.get({
+				url: 'https://playlive.railsbank.com/v1/customer/transactions/' + req.body.transaction_id,
+				headers: {
+					Authorization:
+						'API-Key axkqhp9y1iw1vtgm56c4cnf77i9npjca#xtz4si9frce3kbx80ivnyi32thhblx1slcwipw0qv50dhrq2crdhvpy1ueyvkv5f',
+				},
+				json: true,
+				resolveWithFullResponse: true,
+			});
+			const tx = tx_response.body;
+
+			if (tx.transaction_type === 'transaction-type-send') {
+				// withdraw amounts
+				const allocation = (await db
+					.ref('users')
+					.child(data.phoneNumber)
+					.child('allocation')
+					.once('value')).val();
+
+				await Promise.all(
+					Object.keys(allocation).map(async function(alloc_ticker) {
+						const pct = allocation[alloc_ticker];
+						const alloc_to_this_ticker = (tx.amount * pct) / 100;
+
+						return await db
+							.ref('users')
+							.child(data.phoneNumber)
+							.child('amounts')
+							.child(alloc_ticker)
+							.transaction(function(am) {
+								return am ? am - alloc_to_this_ticker : 0;
+							});
+					}),
+				);
+			}
+
+			if (tx.transaction_type === 'transaction-type-receive') {
+				// credit amounts
+				const allocation = (await db
+					.ref('users')
+					.child(data.phoneNumber)
+					.child('allocation')
+					.once('value')).val();
+
+				await Promise.all(
+					Object.keys(allocation).map(async function(alloc_ticker) {
+						const pct = allocation[alloc_ticker];
+						const alloc_to_this_ticker = (tx.amount * pct) / 100;
+
+						return await db
+							.ref('users')
+							.child(data.phoneNumber)
+							.child('amounts')
+							.child(alloc_ticker)
+							.transaction(function(am) {
+								return am ? am + alloc_to_this_ticker : alloc_to_this_ticker;
+							});
+					}),
+				);
+			}
 		}
 	};
 
