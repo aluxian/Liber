@@ -2,6 +2,9 @@ const util = require('util');
 const authy = require('authy');
 const request = require('request-promise-native');
 
+// play key:
+// l0mvqwv9zvpg4s8aup5376475b6wtg0i#x0xhdvqsdahmoczcdu8g1k2dsrhl7gcdu107962gookg31uddosslqa2v3oe8f14
+
 const AUTHY_API_KEY = 'KiPj41iB83L66Q90y9CQh8feaB3pxBkx';
 
 // The Cloud Functions for Firebase SDK to create Cloud Functions and setup triggers.
@@ -31,10 +34,10 @@ async function refreshEnduser(phoneNumber, enduser_id) {
 		.set(enduser_id);
 
 	let response = await request.get({
-		url: 'https://play.railsbank.com/v1/customer/endusers/' + enduser_id + '/wait',
+		url: 'https://playlive.railsbank.com/v1/customer/endusers/' + enduser_id + '/wait',
 		headers: {
 			Authorization:
-				'API-Key l0mvqwv9zvpg4s8aup5376475b6wtg0i#x0xhdvqsdahmoczcdu8g1k2dsrhl7gcdu107962gookg31uddosslqa2v3oe8f14',
+				'API-Key axkqhp9y1iw1vtgm56c4cnf77i9npjca#xtz4si9frce3kbx80ivnyi32thhblx1slcwipw0qv50dhrq2crdhvpy1ueyvkv5f',
 		},
 		json: true,
 		resolveWithFullResponse: true,
@@ -60,10 +63,10 @@ async function refreshLedger(phoneNumber, ledger_id) {
 		.set(ledger_id);
 
 	let response = await request.get({
-		url: 'https://play.railsbank.com/v1/customer/ledgers/' + ledger_id + '/wait',
+		url: 'https://playlive.railsbank.com/v1/customer/ledgers/' + ledger_id + '/wait',
 		headers: {
 			Authorization:
-				'API-Key l0mvqwv9zvpg4s8aup5376475b6wtg0i#x0xhdvqsdahmoczcdu8g1k2dsrhl7gcdu107962gookg31uddosslqa2v3oe8f14',
+				'API-Key axkqhp9y1iw1vtgm56c4cnf77i9npjca#xtz4si9frce3kbx80ivnyi32thhblx1slcwipw0qv50dhrq2crdhvpy1ueyvkv5f',
 		},
 		json: true,
 		resolveWithFullResponse: true,
@@ -81,12 +84,12 @@ async function refreshLedger(phoneNumber, ledger_id) {
 	console.log('refreshledger success');
 }
 
-async function refreshTransactions(ledger_id) {
+async function refreshTransactions(phoneNumber, ledger_id) {
 	let response = await request.get({
-		url: 'https://play.railsbank.com/v1/customer/transactions',
+		url: 'https://playlive.railsbank.com/v1/customer/transactions',
 		headers: {
 			Authorization:
-				'API-Key l0mvqwv9zvpg4s8aup5376475b6wtg0i#x0xhdvqsdahmoczcdu8g1k2dsrhl7gcdu107962gookg31uddosslqa2v3oe8f14',
+				'API-Key axkqhp9y1iw1vtgm56c4cnf77i9npjca#xtz4si9frce3kbx80ivnyi32thhblx1slcwipw0qv50dhrq2crdhvpy1ueyvkv5f',
 		},
 		json: true,
 		resolveWithFullResponse: true,
@@ -114,7 +117,7 @@ async function refreshTransactions(ledger_id) {
 
 function createEnduser(data) {
 	return request.post({
-		url: 'https://play.railsbank.com/v1/customer/endusers',
+		url: 'https://playlive.railsbank.com/v1/customer/endusers',
 		body: {
 			person: {
 				name: data.name,
@@ -123,7 +126,7 @@ function createEnduser(data) {
 		},
 		headers: {
 			Authorization:
-				'API-Key l0mvqwv9zvpg4s8aup5376475b6wtg0i#x0xhdvqsdahmoczcdu8g1k2dsrhl7gcdu107962gookg31uddosslqa2v3oe8f14',
+				'API-Key axkqhp9y1iw1vtgm56c4cnf77i9npjca#xtz4si9frce3kbx80ivnyi32thhblx1slcwipw0qv50dhrq2crdhvpy1ueyvkv5f',
 		},
 		json: true,
 		resolveWithFullResponse: true,
@@ -132,7 +135,7 @@ function createEnduser(data) {
 
 function createLedger(data, enduser_id) {
 	return request.post({
-		url: 'https://play.railsbank.com/v1/customer/ledgers',
+		url: 'https://playlive.railsbank.com/v1/customer/ledgers',
 		body: {
 			asset_class: 'currency',
 			asset_type: 'gbp',
@@ -141,11 +144,11 @@ function createLedger(data, enduser_id) {
 			ledger_t_and_cs_country_of_jurisdiction: 'GBR',
 			ledger_type: 'ledger-type-single-user',
 			ledger_who_owns_assets: 'ledger-assets-owned-by-me',
-			partner_product: 'ExampleBank-GBP-1',
+			partner_product: 'PayrNet-GBP-1',
 		},
 		headers: {
 			Authorization:
-				'API-Key l0mvqwv9zvpg4s8aup5376475b6wtg0i#x0xhdvqsdahmoczcdu8g1k2dsrhl7gcdu107962gookg31uddosslqa2v3oe8f14',
+				'API-Key axkqhp9y1iw1vtgm56c4cnf77i9npjca#xtz4si9frce3kbx80ivnyi32thhblx1slcwipw0qv50dhrq2crdhvpy1ueyvkv5f',
 		},
 		json: true,
 		resolveWithFullResponse: true,
@@ -166,7 +169,22 @@ exports.finishSignUp = functions.https.onCall((data, context) => {
 		console.log('rasp status code=', ledgerResponse.statusCode || ledgerResponse.status);
 		console.log(ledgerResponse.body);
 		await refreshLedger(data.phoneNumber, ledgerResponse.body.ledger_id);
-		// await refreshTransactions(ledgerResponse.body.ledger_id);
+
+		await db
+			.ref('users')
+			.child(data.phoneNumber)
+			.child('allocation') // ticker -> pct
+			.set({
+				'CASH.GBP': 100,
+			});
+
+		await db
+			.ref('users')
+			.child(data.phoneNumber)
+			.child('amounts') // ticker -> amount
+			.set({
+				'CASH.GBP': 0.0,
+			});
 
 		return 'nicky';
 	};
@@ -176,16 +194,16 @@ exports.finishSignUp = functions.https.onCall((data, context) => {
 
 async function refreshPayment(amount, ledger_id, beneficiary_id, phoneNumber) {
 	let response = await request.post({
-		url: 'https://play.railsbank.com/v1/customer/transactions',
+		url: 'https://playlive.railsbank.com/v1/customer/transactions',
 		body: {
-            amount: amount,
-            beneficiary_id: beneficiary_id,
-            ledger_from_id: ledger_id,
-            payment_type: 'payment-type-UK-FasterPayments'
-        },
-        headers: {
+			amount: amount,
+			beneficiary_id: beneficiary_id,
+			ledger_from_id: ledger_id,
+			payment_type: 'payment-type-UK-FasterPayments',
+		},
+		headers: {
 			Authorization:
-				'API-Key l0mvqwv9zvpg4s8aup5376475b6wtg0i#x0xhdvqsdahmoczcdu8g1k2dsrhl7gcdu107962gookg31uddosslqa2v3oe8f14',
+				'API-Key axkqhp9y1iw1vtgm56c4cnf77i9npjca#xtz4si9frce3kbx80ivnyi32thhblx1slcwipw0qv50dhrq2crdhvpy1ueyvkv5f',
 		},
 		json: true,
 		resolveWithFullResponse: true,
@@ -194,32 +212,41 @@ async function refreshPayment(amount, ledger_id, beneficiary_id, phoneNumber) {
 	console.log('rasp status code=', response.statusCode || response.status);
 	console.log(response.body);
 
-	await db
-		.ref('users')
-		.child(phoneNumber)
-		.child('transactions')
-		.push()
-        .set(response.body.transaction_id);
+	response = await request.get({
+		url: 'https://playlive.railsbank.com/v1/customer/transactions/' + response.body.transaction_id,
+		headers: {
+			Authorization:
+				'API-Key axkqhp9y1iw1vtgm56c4cnf77i9npjca#xtz4si9frce3kbx80ivnyi32thhblx1slcwipw0qv50dhrq2crdhvpy1ueyvkv5f',
+		},
+		json: true,
+		resolveWithFullResponse: true,
+	});
+
+	console.log('rasp status code=', response.statusCode || response.status);
+	console.log(response.body);
+
+	await refreshLedger(phoneNumber, ledger_id);
+	await refreshTransactions(phoneNumber, ledger_id);
 
 	console.log('refreshpayment success');
 }
 
 function createBeneficiary(data, enduser_id) {
 	return request.post({
-		url: 'https://play.railsbank.com/v1/customer/beneficiaries',
+		url: 'https://playlive.railsbank.com/v1/customer/beneficiaries',
 		body: {
 			asset_class: 'currency',
 			asset_type: 'gbp',
 			holder_id: enduser_id,
-            person: {
-                name: data.name,
-            }
-            uk_account_number: data.accno,
-            uk_sort_code: data.sortcode
-        },
+			person: {
+				name: data.name,
+			},
+			uk_account_number: data.accno,
+			uk_sort_code: data.sortcode,
+		},
 		headers: {
 			Authorization:
-				'API-Key l0mvqwv9zvpg4s8aup5376475b6wtg0i#x0xhdvqsdahmoczcdu8g1k2dsrhl7gcdu107962gookg31uddosslqa2v3oe8f14',
+				'API-Key axkqhp9y1iw1vtgm56c4cnf77i9npjca#xtz4si9frce3kbx80ivnyi32thhblx1slcwipw0qv50dhrq2crdhvpy1ueyvkv5f',
 		},
 		json: true,
 		resolveWithFullResponse: true,
@@ -228,19 +255,19 @@ function createBeneficiary(data, enduser_id) {
 
 exports.withdraw = functions.https.onCall((data, context) => {
 	const exec = async function() {
-		const response = await db
-                             .ref('users')
-                             .child(data.phoneNumber)
-                             .once('value');
+		const snapshot = await db
+			.ref('users')
+			.child(data.phoneNumber)
+			.once('value');
 
-        const beneficiaryResponse = await createBeneficiary(data, response.enduser_id);
-        console.log('rasp status code=', beneficiaryResponse.statusCode || beneficiaryResponse.status);
+		const beneficiaryResponse = await createBeneficiary(data, snapshot.val().enduser_id);
+		console.log('rasp status code=', beneficiaryResponse.statusCode || beneficiaryResponse.status);
 		console.log(beneficiaryResponse.body);
-        
-        const beneficiary_id = beneficiaryResponse.body.beneficiary_id;
-        
-        await refreshPayment(data.amount, response.value.ledger_id, beneficiary_id, data.phoneNumber);
-        
+
+		const beneficiary_id = beneficiaryResponse.body.beneficiary_id;
+
+		await refreshPayment(data.amount, snapshot.val().ledger_id, beneficiary_id, data.phoneNumber);
+
 		return 'alex';
 	};
 
@@ -250,5 +277,37 @@ exports.withdraw = functions.https.onCall((data, context) => {
 exports.railsbankWebhook = functions.https.onRequest((req, res) => {
 	console.log(req.body);
 	// import all ledger txs into firebase again
-	return refreshTransactions(req.body.ledger_id);
+
+	if (req.body.type !== 'ledger-changed') {
+		console.log('ignored');
+		return res.send('whatever');
+	}
+
+	const exec = async function() {
+		const allUsers = (await db.ref('users').once('value')).val();
+		let phoneNumber = null;
+
+		for (let i_phoneNumber of Object.keys(allUsers)) {
+			if (allUsers[i_phoneNumber].ledger_id === req.body.ledger_id) {
+				phoneNumber = i_phoneNumber;
+				break;
+			}
+		}
+
+		if (phoneNumber) {
+			await Promise.all([
+				refreshLedger(phoneNumber, req.body.ledger_id),
+				refreshTransactions(phoneNumber, req.body.ledger_id),
+			]);
+		} else {
+			console.warn('phone number is null ');
+		}
+	};
+
+	exec()
+		.then(() => res.send('ok'))
+		.catch((err) => {
+			console.error(err);
+			res.send(err || 'err');
+		});
 });
