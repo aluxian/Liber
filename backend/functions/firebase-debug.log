@@ -1,0 +1,35 @@
+[debug] [2018-11-26T12:58:55.540Z] ----------------------------------------------------------------------
+[debug] [2018-11-26T12:58:55.543Z] Command:       /usr/local/Cellar/node/11.1.0/bin/node /usr/local/bin/firebase functions:shell
+[debug] [2018-11-26T12:58:55.543Z] CLI Version:   6.1.1
+[debug] [2018-11-26T12:58:55.543Z] Platform:      darwin
+[debug] [2018-11-26T12:58:55.543Z] Node Version:  v11.1.0
+[debug] [2018-11-26T12:58:55.555Z] Time:          Mon Nov 26 2018 12:58:55 GMT+0000 (Greenwich Mean Time)
+[debug] [2018-11-26T12:58:55.555Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-11-26T12:58:55.573Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-26T12:58:55.573Z] > authorizing via signed-in user
+[debug] [2018-11-26T12:58:55.573Z] [iam] checking project liber-98ff3 for permissions ["firebase.projects.get"]
+[debug] [2018-11-26T12:58:55.575Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-11-26T12:58:55.576Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2018-11-26T12:58:55.791Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-26T12:58:55.802Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/liber-98ff3:testIamPermissions  
+
+[debug] [2018-11-26T12:58:56.657Z] <<< HTTP RESPONSE 200
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-11-26T12:58:57.405Z] Fetching environment
+[debug] [2018-11-26T12:58:57.407Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/liber-98ff3  
+ 
+[debug] [2018-11-26T12:58:58.193Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-26T12:58:58.194Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1094026479299:getServerAppConfig  
+ 
+[debug] [2018-11-26T12:58:58.454Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-26T12:58:58.454Z] Starting @google-cloud/functions-emulator
+[debug] [2018-11-26T12:59:00.013Z] Parsing function triggers
+[info] ✔  functions: sendMobileCode
+[info] ✔  functions: finishSignUp
+[info] ✔  functions: importAprexo
+[info] ✔  functions: withdraw
+[info] ✔  functions: continuouslyUpdateBtcAmount
+[info] ✔  functions: railsbankWebhook
+[info] ✔  functions: liveBitcoin

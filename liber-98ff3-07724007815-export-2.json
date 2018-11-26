@@ -1,0 +1,2046 @@
+{
+  "allocation" : {
+    "CASH_GBP" : 80,
+    "CRYPT_BTC" : 20
+  },
+  "amounts" : {
+    "CASH_GBP" : 8,
+    "CRYPT_BTC" : 2.0269887707036722
+  },
+  "enduser" : {
+    "created_at" : "2018-11-24T22:19:23.255Z",
+    "enduser_id" : "5bf9ce6b-5634-4a25-9906-cfbcfb0e0a7c",
+    "enduser_status" : "enduser-status-ok",
+    "last_modified_at" : "2018-11-24T22:19:23.255Z",
+    "person" : {
+      "name" : "Alexandru Rosianu",
+      "telephone" : "07724007815"
+    },
+    "screening_monitored_search" : false
+  },
+  "enduser_id" : "5bf9ce6b-5634-4a25-9906-cfbcfb0e0a7c",
+  "first_name" : "Alexandru",
+  "last_name" : "Rosianu",
+  "ledger" : {
+    "amount" : 10,
+    "asset_class" : "currency",
+    "asset_type" : "gbp",
+    "created_at" : "2018-11-24T22:19:24.301Z",
+    "holder_id" : "5bf9ce6b-5634-4a25-9906-cfbcfb0e0a7c",
+    "last_modified_at" : "2018-11-24T22:19:24.301Z",
+    "ledger_holder" : {
+      "enduser_id" : "5bf9ce6b-5634-4a25-9906-cfbcfb0e0a7c",
+      "person" : {
+        "name" : "Alexandru Rosianu"
+      }
+    },
+    "ledger_id" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+    "ledger_primary_use_types" : [ "ledger-primary-use-types-investment" ],
+    "ledger_status" : "ledger-status-ok",
+    "ledger_t_and_cs_country_of_jurisdiction" : "GB",
+    "ledger_type" : "ledger-type-single-user",
+    "ledger_who_owns_assets" : "ledger-assets-owned-by-me",
+    "partner" : {
+      "company" : {
+        "name" : "PayrNet"
+      },
+      "partner_id" : "58fe2ce1-b90b-4868-b40d-cb3bc43395d9",
+      "partner_ref" : "payrnet"
+    },
+    "partner_id" : "58fe2ce1-b90b-4868-b40d-cb3bc43395d9",
+    "partner_product" : "PayrNet-GBP-1",
+    "partner_ref" : "payrnet",
+    "uk_account_number" : "07456405",
+    "uk_sort_code" : "040052"
+  },
+  "ledger_id" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+  "transactions" : [ {
+    "amount" : 1,
+    "asset_class" : "currency",
+    "asset_type" : "gbp",
+    "created_at" : "2018-11-24T22:21:59.559Z",
+    "ledger_to_id" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+    "partner_product" : "PayrNet-GBP-1",
+    "payment_info" : {
+      "addressUid" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+      "destinationAccount" : {
+        "accountName" : "Alexandru Rosianu",
+        "accountNumber" : "07456405",
+        "sortCode" : "040052"
+      },
+      "fpid" : "PXIO0OA0HO5568XKXL1020181124826040004     ",
+      "fpsSettlementCycleId" : "CYCLE_003",
+      "fpsSettlementDate" : "2018-11-23",
+      "instructedAmount" : {
+        "currency" : "GBP",
+        "minorUnits" : 100
+      },
+      "paymentAccountUid" : "5bf9cb4f-ec4f-46b7-97b5-ecde1393191b",
+      "paymentBusinessUid" : "818a221c-8dca-43c5-9f3c-49d605a97d6d",
+      "paymentUid" : "051cdf93-25f6-4276-8a75-3a4e8cfbd7c5",
+      "receivedAt" : "2018-11-24T22:21:59.000Z",
+      "reference" : "",
+      "settlementAmount" : {
+        "currency" : "GBP",
+        "minorUnits" : 100
+      },
+      "settlementCycleUid" : "8d6e5fe3-4aaf-4449-b9a9-b0ea57e6bb63",
+      "sourceAccount" : {
+        "accountName" : "Alexandru Rosianu",
+        "accountNumber" : "24536754",
+        "sortCode" : "040004"
+      },
+      "type" : "SIP"
+    },
+    "payment_type" : "payment-type-UK-FasterPayments",
+    "reference" : "",
+    "transaction_id" : "5bf9cf07-132c-4473-aec8-6cb62b211013",
+    "transaction_printout" : {
+      "beneficiaryiban" : "040052/07456405",
+      "beneficiaryname" : "Alexandru Rosianu",
+      "intermediarypsp" : "PayrNet",
+      "intermediarypspaddress" : {
+        "address_city" : "London",
+        "address_iso_country" : "GB",
+        "address_number" : "152",
+        "address_postal_code" : "EC1V 2NX",
+        "address_refinement" : "Kemp House",
+        "address_street" : "City Road"
+      },
+      "intermediarypspphysicallocation" : "GB",
+      "paymentonbehalfoftype" : "POO",
+      "paymentpartytype" : "receive fourth_party",
+      "pspofsenderaddress" : {
+        "address_city" : "London",
+        "address_iso_country" : "GB",
+        "address_number" : "152",
+        "address_postal_code" : "EC1V 2NX",
+        "address_refinement" : "Kemp House",
+        "address_street" : "City Road"
+      },
+      "pspofsendername" : "PayrNet",
+      "pspofsenderphysicallocation" : "GB",
+      "pspofultimatebenename" : "Starling",
+      "ultimatesenderaccountnumber" : "040004/24536754",
+      "ultimatesendername" : "Alexandru Rosianu"
+    },
+    "transaction_status" : "transaction-status-accepted",
+    "transaction_type" : "transaction-type-receive"
+  }, {
+    "amount" : 1,
+    "asset_class" : "currency",
+    "asset_type" : "gbp",
+    "created_at" : "2018-11-24T22:32:48.393Z",
+    "ledger_to_id" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+    "partner_product" : "PayrNet-GBP-1",
+    "payment_info" : {
+      "addressUid" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+      "destinationAccount" : {
+        "accountName" : "Alexandru Rosianu",
+        "accountNumber" : "07456405",
+        "sortCode" : "040052"
+      },
+      "fpid" : "PHC4YW7Q09PP23YBI01020181124826040004     ",
+      "fpsSettlementCycleId" : "CYCLE_003",
+      "fpsSettlementDate" : "2018-11-23",
+      "instructedAmount" : {
+        "currency" : "GBP",
+        "minorUnits" : 100
+      },
+      "paymentAccountUid" : "5bf9cb4f-ec4f-46b7-97b5-ecde1393191b",
+      "paymentBusinessUid" : "818a221c-8dca-43c5-9f3c-49d605a97d6d",
+      "paymentUid" : "b9fe0429-cd43-4bab-8956-c8d5467c277d",
+      "receivedAt" : "2018-11-24T22:32:47.000Z",
+      "reference" : "",
+      "settlementAmount" : {
+        "currency" : "GBP",
+        "minorUnits" : 100
+      },
+      "settlementCycleUid" : "8d6e5fe3-4aaf-4449-b9a9-b0ea57e6bb63",
+      "sourceAccount" : {
+        "accountName" : "Alexandru Rosianu",
+        "accountNumber" : "24536754",
+        "sortCode" : "040004"
+      },
+      "type" : "SIP"
+    },
+    "payment_type" : "payment-type-UK-FasterPayments",
+    "reference" : "",
+    "transaction_id" : "5bf9d190-c3e2-49f6-9d18-1c40da07ad08",
+    "transaction_printout" : {
+      "beneficiaryiban" : "040052/07456405",
+      "beneficiaryname" : "Alexandru Rosianu",
+      "intermediarypsp" : "PayrNet",
+      "intermediarypspaddress" : {
+        "address_city" : "London",
+        "address_iso_country" : "GB",
+        "address_number" : "152",
+        "address_postal_code" : "EC1V 2NX",
+        "address_refinement" : "Kemp House",
+        "address_street" : "City Road"
+      },
+      "intermediarypspphysicallocation" : "GB",
+      "paymentonbehalfoftype" : "POO",
+      "paymentpartytype" : "receive fourth_party",
+      "pspofsenderaddress" : {
+        "address_city" : "London",
+        "address_iso_country" : "GB",
+        "address_number" : "152",
+        "address_postal_code" : "EC1V 2NX",
+        "address_refinement" : "Kemp House",
+        "address_street" : "City Road"
+      },
+      "pspofsendername" : "PayrNet",
+      "pspofsenderphysicallocation" : "GB",
+      "pspofultimatebenename" : "Starling",
+      "ultimatesenderaccountnumber" : "040004/24536754",
+      "ultimatesendername" : "Alexandru Rosianu"
+    },
+    "transaction_status" : "transaction-status-accepted",
+    "transaction_type" : "transaction-type-receive"
+  }, {
+    "amount" : 1,
+    "asset_class" : "currency",
+    "asset_type" : "gbp",
+    "beneficiary_account_id" : "5bf9d68c-9166-443f-9245-7221ed16beae",
+    "beneficiary_id" : "5bf9d68c-99c5-481c-bf50-b0c01043e501",
+    "created_at" : "2018-11-24T22:54:05.069Z",
+    "ledger_from_id" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+    "partner_product" : "PayrNet-GBP-1",
+    "payment_info" : {
+      "currencyAndAmount" : {
+        "currency" : "GBP",
+        "minorUnits" : 100
+      },
+      "domesticInstructionAccount" : {
+        "accountName" : "Alexandru Rosianu",
+        "accountNumber" : "24536754",
+        "sortCode" : "040004"
+      },
+      "reference" : "+",
+      "type" : "SIP"
+    },
+    "payment_type" : "payment-type-UK-FasterPayments",
+    "transaction_id" : "5bf9d68d-0401-4662-9382-37cafb573cce",
+    "transaction_printout" : {
+      "beneficiaryiban" : "sort-code - 040004/24536754",
+      "beneficiaryname" : "Alexandru Rosianu",
+      "intermediarypsp" : "PayrNet",
+      "intermediarypspaddress" : {
+        "address_city" : "London",
+        "address_iso_country" : "GB",
+        "address_number" : "152",
+        "address_postal_code" : "EC1V 2NX",
+        "address_refinement" : "Kemp House",
+        "address_street" : "City Road"
+      },
+      "intermediarypspphysicallocation" : "GB",
+      "paymentonbehalfoftype" : "POO",
+      "paymentpartytype" : "fourth_party",
+      "pspaccounttandcscountryofjurisdiction" : "GB",
+      "pspofsenderaddress" : {
+        "address_iso_country" : "GB"
+      },
+      "pspofsendername" : "University of Southampton",
+      "pspofsenderphysicallocation" : "GB",
+      "pspofultimatebenename" : "Starling",
+      "ultimatesenderaccountnumber" : "040052/07456405",
+      "ultimatesendername" : "Alexandru Rosianu"
+    },
+    "transaction_status" : "transaction-status-accepted",
+    "transaction_type" : "transaction-type-send"
+  }, {
+    "amount" : 1,
+    "asset_class" : "currency",
+    "asset_type" : "gbp",
+    "beneficiary_account_id" : "5bf9d6bc-5f9a-4ea8-ab01-551d39b6ef37",
+    "beneficiary_id" : "5bf9d6bc-f0a8-48c8-bcf4-492d0e65b7ee",
+    "created_at" : "2018-11-24T22:54:52.594Z",
+    "ledger_from_id" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+    "partner_product" : "PayrNet-GBP-1",
+    "payment_info" : {
+      "currencyAndAmount" : {
+        "currency" : "GBP",
+        "minorUnits" : 100
+      },
+      "domesticInstructionAccount" : {
+        "accountName" : "Alexandru Rosianu",
+        "accountNumber" : "24536754",
+        "sortCode" : "040004"
+      },
+      "reference" : "+",
+      "type" : "SIP"
+    },
+    "payment_type" : "payment-type-UK-FasterPayments",
+    "transaction_id" : "5bf9d6bc-0f8a-4b40-af72-78baa29d4bdc",
+    "transaction_printout" : {
+      "beneficiaryiban" : "sort-code - 040004/24536754",
+      "beneficiaryname" : "Alexandru Rosianu",
+      "intermediarypsp" : "PayrNet",
+      "intermediarypspaddress" : {
+        "address_city" : "London",
+        "address_iso_country" : "GB",
+        "address_number" : "152",
+        "address_postal_code" : "EC1V 2NX",
+        "address_refinement" : "Kemp House",
+        "address_street" : "City Road"
+      },
+      "intermediarypspphysicallocation" : "GB",
+      "paymentonbehalfoftype" : "POO",
+      "paymentpartytype" : "fourth_party",
+      "pspaccounttandcscountryofjurisdiction" : "GB",
+      "pspofsenderaddress" : {
+        "address_iso_country" : "GB"
+      },
+      "pspofsendername" : "University of Southampton",
+      "pspofsenderphysicallocation" : "GB",
+      "pspofultimatebenename" : "Starling",
+      "ultimatesenderaccountnumber" : "040052/07456405",
+      "ultimatesendername" : "Alexandru Rosianu"
+    },
+    "transaction_status" : "transaction-status-accepted",
+    "transaction_type" : "transaction-type-send"
+  }, {
+    "amount" : 1.33,
+    "asset_class" : "currency",
+    "asset_type" : "gbp",
+    "created_at" : "2018-11-25T00:20:48.797Z",
+    "ledger_to_id" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+    "partner_product" : "PayrNet-GBP-1",
+    "payment_info" : {
+      "addressUid" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+      "destinationAccount" : {
+        "accountName" : "Alexandru Rosianu",
+        "accountNumber" : "07456405",
+        "sortCode" : "040052"
+      },
+      "fpid" : "PFDL7AME0L6I3GMIWQ1020181125826040004     ",
+      "fpsSettlementCycleId" : "CYCLE_003",
+      "fpsSettlementDate" : "2018-11-23",
+      "instructedAmount" : {
+        "currency" : "GBP",
+        "minorUnits" : 133
+      },
+      "paymentAccountUid" : "5bf9cb4f-ec4f-46b7-97b5-ecde1393191b",
+      "paymentBusinessUid" : "818a221c-8dca-43c5-9f3c-49d605a97d6d",
+      "paymentUid" : "c33cf557-b157-43fb-b2f1-54eb4f1b4509",
+      "receivedAt" : "2018-11-25T00:20:48.000Z",
+      "reference" : "",
+      "settlementAmount" : {
+        "currency" : "GBP",
+        "minorUnits" : 133
+      },
+      "settlementCycleUid" : "8d6e5fe3-4aaf-4449-b9a9-b0ea57e6bb63",
+      "sourceAccount" : {
+        "accountName" : "Alexandru Rosianu",
+        "accountNumber" : "24536754",
+        "sortCode" : "040004"
+      },
+      "type" : "SIP"
+    },
+    "payment_type" : "payment-type-UK-FasterPayments",
+    "reference" : "",
+    "transaction_id" : "5bf9eae0-fe1a-474d-bd34-78a2462bd99d",
+    "transaction_printout" : {
+      "beneficiaryiban" : "040052/07456405",
+      "beneficiaryname" : "Alexandru Rosianu",
+      "intermediarypsp" : "PayrNet",
+      "intermediarypspaddress" : {
+        "address_city" : "London",
+        "address_iso_country" : "GB",
+        "address_number" : "152",
+        "address_postal_code" : "EC1V 2NX",
+        "address_refinement" : "Kemp House",
+        "address_street" : "City Road"
+      },
+      "intermediarypspphysicallocation" : "GB",
+      "paymentonbehalfoftype" : "POO",
+      "paymentpartytype" : "receive fourth_party",
+      "pspofsenderaddress" : {
+        "address_city" : "London",
+        "address_iso_country" : "GB",
+        "address_number" : "152",
+        "address_postal_code" : "EC1V 2NX",
+        "address_refinement" : "Kemp House",
+        "address_street" : "City Road"
+      },
+      "pspofsendername" : "PayrNet",
+      "pspofsenderphysicallocation" : "GB",
+      "pspofultimatebenename" : "Starling",
+      "ultimatesenderaccountnumber" : "040004/24536754",
+      "ultimatesendername" : "Alexandru Rosianu"
+    },
+    "transaction_status" : "transaction-status-accepted",
+    "transaction_type" : "transaction-type-receive"
+  }, {
+    "amount" : 1.44,
+    "asset_class" : "currency",
+    "asset_type" : "gbp",
+    "created_at" : "2018-11-25T00:24:43.222Z",
+    "ledger_to_id" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+    "partner_product" : "PayrNet-GBP-1",
+    "payment_info" : {
+      "addressUid" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+      "destinationAccount" : {
+        "accountName" : "Alexandru Rosianu",
+        "accountNumber" : "07456405",
+        "sortCode" : "040052"
+      },
+      "fpid" : "P430IDLJRMFG9WATTV1020181125826040004     ",
+      "fpsSettlementCycleId" : "CYCLE_003",
+      "fpsSettlementDate" : "2018-11-23",
+      "instructedAmount" : {
+        "currency" : "GBP",
+        "minorUnits" : 144
+      },
+      "paymentAccountUid" : "5bf9cb4f-ec4f-46b7-97b5-ecde1393191b",
+      "paymentBusinessUid" : "818a221c-8dca-43c5-9f3c-49d605a97d6d",
+      "paymentUid" : "71fa8ce1-2ae4-4dd4-b1bc-963a53b4769e",
+      "receivedAt" : "2018-11-25T00:24:42.000Z",
+      "reference" : "",
+      "settlementAmount" : {
+        "currency" : "GBP",
+        "minorUnits" : 144
+      },
+      "settlementCycleUid" : "8d6e5fe3-4aaf-4449-b9a9-b0ea57e6bb63",
+      "sourceAccount" : {
+        "accountName" : "Alexandru Rosianu",
+        "accountNumber" : "24536754",
+        "sortCode" : "040004"
+      },
+      "type" : "SIP"
+    },
+    "payment_type" : "payment-type-UK-FasterPayments",
+    "reference" : "",
+    "transaction_id" : "5bf9ebcb-636b-4553-b4ad-0251613d0db4",
+    "transaction_printout" : {
+      "beneficiaryiban" : "040052/07456405",
+      "beneficiaryname" : "Alexandru Rosianu",
+      "intermediarypsp" : "PayrNet",
+      "intermediarypspaddress" : {
+        "address_city" : "London",
+        "address_iso_country" : "GB",
+        "address_number" : "152",
+        "address_postal_code" : "EC1V 2NX",
+        "address_refinement" : "Kemp House",
+        "address_street" : "City Road"
+      },
+      "intermediarypspphysicallocation" : "GB",
+      "paymentonbehalfoftype" : "POO",
+      "paymentpartytype" : "receive fourth_party",
+      "pspofsenderaddress" : {
+        "address_city" : "London",
+        "address_iso_country" : "GB",
+        "address_number" : "152",
+        "address_postal_code" : "EC1V 2NX",
+        "address_refinement" : "Kemp House",
+        "address_street" : "City Road"
+      },
+      "pspofsendername" : "PayrNet",
+      "pspofsenderphysicallocation" : "GB",
+      "pspofultimatebenename" : "Starling",
+      "ultimatesenderaccountnumber" : "040004/24536754",
+      "ultimatesendername" : "Alexandru Rosianu"
+    },
+    "transaction_status" : "transaction-status-accepted",
+    "transaction_type" : "transaction-type-receive"
+  }, {
+    "amount" : 1.77,
+    "asset_class" : "currency",
+    "asset_type" : "gbp",
+    "beneficiary_account_id" : "5bf9effa-84c3-4447-baa3-98d99f7e427f",
+    "beneficiary_id" : "5bf9effa-6c97-41b3-84cf-cd15b451beae",
+    "created_at" : "2018-11-25T00:42:34.768Z",
+    "ledger_from_id" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+    "partner_product" : "PayrNet-GBP-1",
+    "payment_info" : {
+      "currencyAndAmount" : {
+        "currency" : "GBP",
+        "minorUnits" : 177
+      },
+      "domesticInstructionAccount" : {
+        "accountName" : "Alexandru Rosianu",
+        "accountNumber" : "24536754",
+        "sortCode" : "040004"
+      },
+      "reference" : "+",
+      "type" : "SIP"
+    },
+    "payment_type" : "payment-type-UK-FasterPayments",
+    "transaction_id" : "5bf9effa-1a94-41d9-a6b9-11848bfae782",
+    "transaction_printout" : {
+      "beneficiaryiban" : "sort-code - 040004/24536754",
+      "beneficiaryname" : "Alexandru Rosianu",
+      "intermediarypsp" : "PayrNet",
+      "intermediarypspaddress" : {
+        "address_city" : "London",
+        "address_iso_country" : "GB",
+        "address_number" : "152",
+        "address_postal_code" : "EC1V 2NX",
+        "address_refinement" : "Kemp House",
+        "address_street" : "City Road"
+      },
+      "intermediarypspphysicallocation" : "GB",
+      "paymentonbehalfoftype" : "POO",
+      "paymentpartytype" : "fourth_party",
+      "pspaccounttandcscountryofjurisdiction" : "GB",
+      "pspofsenderaddress" : {
+        "address_iso_country" : "GB"
+      },
+      "pspofsendername" : "University of Southampton",
+      "pspofsenderphysicallocation" : "GB",
+      "pspofultimatebenename" : "Starling",
+      "ultimatesenderaccountnumber" : "040052/07456405",
+      "ultimatesendername" : "Alexandru Rosianu"
+    },
+    "transaction_status" : "transaction-status-accepted",
+    "transaction_type" : "transaction-type-send"
+  }, {
+    "amount" : 1,
+    "asset_class" : "currency",
+    "asset_type" : "gbp",
+    "beneficiary_account_id" : "5bf9f00d-9c0e-44aa-a593-db73d3b7307b",
+    "beneficiary_id" : "5bf9f00d-ff83-45a1-8f49-55266fba6030",
+    "created_at" : "2018-11-25T00:42:53.868Z",
+    "ledger_from_id" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+    "partner_product" : "PayrNet-GBP-1",
+    "payment_info" : {
+      "currencyAndAmount" : {
+        "currency" : "GBP",
+        "minorUnits" : 100
+      },
+      "domesticInstructionAccount" : {
+        "accountName" : "Alexandru Rosianu",
+        "accountNumber" : "24536754",
+        "sortCode" : "040004"
+      },
+      "reference" : "+",
+      "type" : "SIP"
+    },
+    "payment_type" : "payment-type-UK-FasterPayments",
+    "transaction_id" : "5bf9f00d-c771-49f4-b70c-3a84478a27e6",
+    "transaction_printout" : {
+      "beneficiaryiban" : "sort-code - 040004/24536754",
+      "beneficiaryname" : "Alexandru Rosianu",
+      "intermediarypsp" : "PayrNet",
+      "intermediarypspaddress" : {
+        "address_city" : "London",
+        "address_iso_country" : "GB",
+        "address_number" : "152",
+        "address_postal_code" : "EC1V 2NX",
+        "address_refinement" : "Kemp House",
+        "address_street" : "City Road"
+      },
+      "intermediarypspphysicallocation" : "GB",
+      "paymentonbehalfoftype" : "POO",
+      "paymentpartytype" : "fourth_party",
+      "pspaccounttandcscountryofjurisdiction" : "GB",
+      "pspofsenderaddress" : {
+        "address_iso_country" : "GB"
+      },
+      "pspofsendername" : "University of Southampton",
+      "pspofsenderphysicallocation" : "GB",
+      "pspofultimatebenename" : "Starling",
+      "ultimatesenderaccountnumber" : "040052/07456405",
+      "ultimatesendername" : "Alexandru Rosianu"
+    },
+    "transaction_status" : "transaction-status-accepted",
+    "transaction_type" : "transaction-type-send"
+  }, {
+    "amount" : 5,
+    "asset_class" : "currency",
+    "asset_type" : "gbp",
+    "created_at" : "2018-11-25T00:43:52.530Z",
+    "ledger_to_id" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+    "partner_product" : "PayrNet-GBP-1",
+    "payment_info" : {
+      "addressUid" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+      "destinationAccount" : {
+        "accountName" : "Alexandru Rosianu",
+        "accountNumber" : "07456405",
+        "sortCode" : "040052"
+      },
+      "fpid" : "PRSVCIYCLVS41LA1S81020181125826040004     ",
+      "fpsSettlementCycleId" : "CYCLE_003",
+      "fpsSettlementDate" : "2018-11-23",
+      "instructedAmount" : {
+        "currency" : "GBP",
+        "minorUnits" : 500
+      },
+      "paymentAccountUid" : "5bf9cb4f-ec4f-46b7-97b5-ecde1393191b",
+      "paymentBusinessUid" : "818a221c-8dca-43c5-9f3c-49d605a97d6d",
+      "paymentUid" : "6d1783a1-2ebe-4baa-99f8-8087ba3d4a6c",
+      "receivedAt" : "2018-11-25T00:43:52.000Z",
+      "reference" : "",
+      "settlementAmount" : {
+        "currency" : "GBP",
+        "minorUnits" : 500
+      },
+      "settlementCycleUid" : "8d6e5fe3-4aaf-4449-b9a9-b0ea57e6bb63",
+      "sourceAccount" : {
+        "accountName" : "Alexandru Rosianu",
+        "accountNumber" : "24536754",
+        "sortCode" : "040004"
+      },
+      "type" : "SIP"
+    },
+    "payment_type" : "payment-type-UK-FasterPayments",
+    "reference" : "",
+    "transaction_id" : "5bf9f048-b99a-4d1e-aab1-b6eab8bfa3eb",
+    "transaction_printout" : {
+      "beneficiaryiban" : "040052/07456405",
+      "beneficiaryname" : "Alexandru Rosianu",
+      "intermediarypsp" : "PayrNet",
+      "intermediarypspaddress" : {
+        "address_city" : "London",
+        "address_iso_country" : "GB",
+        "address_number" : "152",
+        "address_postal_code" : "EC1V 2NX",
+        "address_refinement" : "Kemp House",
+        "address_street" : "City Road"
+      },
+      "intermediarypspphysicallocation" : "GB",
+      "paymentonbehalfoftype" : "POO",
+      "paymentpartytype" : "receive fourth_party",
+      "pspofsenderaddress" : {
+        "address_city" : "London",
+        "address_iso_country" : "GB",
+        "address_number" : "152",
+        "address_postal_code" : "EC1V 2NX",
+        "address_refinement" : "Kemp House",
+        "address_street" : "City Road"
+      },
+      "pspofsendername" : "PayrNet",
+      "pspofsenderphysicallocation" : "GB",
+      "pspofultimatebenename" : "Starling",
+      "ultimatesenderaccountnumber" : "040004/24536754",
+      "ultimatesendername" : "Alexandru Rosianu"
+    },
+    "transaction_status" : "transaction-status-accepted",
+    "transaction_type" : "transaction-type-receive"
+  }, {
+    "amount" : 1,
+    "asset_class" : "currency",
+    "asset_type" : "gbp",
+    "beneficiary_account_id" : "5bf9f0a7-f704-4f89-9243-2ec8c1a6621c",
+    "beneficiary_id" : "5bf9f0a7-770c-461c-adea-4a8f6ae89fdf",
+    "created_at" : "2018-11-25T00:45:28.131Z",
+    "ledger_from_id" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+    "partner_product" : "PayrNet-GBP-1",
+    "payment_info" : {
+      "currencyAndAmount" : {
+        "currency" : "GBP",
+        "minorUnits" : 100
+      },
+      "domesticInstructionAccount" : {
+        "accountName" : "Alexandru Rosianu",
+        "accountNumber" : "24536754",
+        "sortCode" : "040004"
+      },
+      "reference" : "+",
+      "type" : "SIP"
+    },
+    "payment_type" : "payment-type-UK-FasterPayments",
+    "transaction_id" : "5bf9f0a8-2e3c-4776-9d7b-5e4623ed3a9d",
+    "transaction_printout" : {
+      "beneficiaryiban" : "sort-code - 040004/24536754",
+      "beneficiaryname" : "Alexandru Rosianu",
+      "intermediarypsp" : "PayrNet",
+      "intermediarypspaddress" : {
+        "address_city" : "London",
+        "address_iso_country" : "GB",
+        "address_number" : "152",
+        "address_postal_code" : "EC1V 2NX",
+        "address_refinement" : "Kemp House",
+        "address_street" : "City Road"
+      },
+      "intermediarypspphysicallocation" : "GB",
+      "paymentonbehalfoftype" : "POO",
+      "paymentpartytype" : "fourth_party",
+      "pspaccounttandcscountryofjurisdiction" : "GB",
+      "pspofsenderaddress" : {
+        "address_iso_country" : "GB"
+      },
+      "pspofsendername" : "University of Southampton",
+      "pspofsenderphysicallocation" : "GB",
+      "pspofultimatebenename" : "Starling",
+      "ultimatesenderaccountnumber" : "040052/07456405",
+      "ultimatesendername" : "Alexandru Rosianu"
+    },
+    "transaction_status" : "transaction-status-accepted",
+    "transaction_type" : "transaction-type-send"
+  }, {
+    "amount" : 4,
+    "asset_class" : "currency",
+    "asset_type" : "gbp",
+    "beneficiary_account_id" : "5bfa233f-b255-43ef-aa6f-3eb2ba34f08b",
+    "beneficiary_id" : "5bfa233f-1155-485a-92e5-3934837980f2",
+    "created_at" : "2018-11-25T04:21:20.190Z",
+    "ledger_from_id" : "5bf9ce6c-12a9-488f-8a2e-754aed07c989",
+    "partner_product" : "PayrNet-GBP-1",
+    "payment_info" : {
+      "currencyAndAmount" : {
+        "currency" : "GBP",
+        "minorUnits" : 400
+      },
+      "domesticInstructionAccount" : {
+        "accountName" : "Alexandru Rosianu",
+        "accountNumber" : "24536754",
+        "sortCode" : "040004"
+      },
+      "reference" : "+",
+      "type" : "SIP"
+    },
+    "payment_type" : "payment-type-UK-FasterPayments",
+    "transaction_id" : "5bfa2340-3fc3-4aac-b445-7cab12e29ab7",
+    "transaction_printout" : {
+      "beneficiaryiban" : "sort-code - 040004/24536754",
+      "beneficiaryname" : "Alexandru Rosianu",
+      "intermediarypsp" : "PayrNet",
+      "intermediarypspaddress" : {
+        "address_city" : "London",
+        "address_iso_country" : "GB",
+        "address_number" : "152",
+        "address_postal_code" : "EC1V 2NX",
+        "address_refinement" : "Kemp House",
+        "address_street" : "City Road"
+      },
+      "intermediarypspphysicallocation" : "GB",
+      "paymentonbehalfoftype" : "POO",
+      "paymentpartytype" : "fourth_party",
+      "pspaccounttandcscountryofjurisdiction" : "GB",
+      "pspofsenderaddress" : {
+        "address_iso_country" : "GB"
+      },
+      "pspofsendername" : "University of Southampton",
+      "pspofsenderphysicallocation" : "GB",
+      "pspofultimatebenename" : "Starling",
+      "ultimatesenderaccountnumber" : "040052/07456405",
+      "ultimatesendername" : "Alexandru Rosianu"
+    },
+    "transaction_status" : "transaction-status-accepted",
+    "transaction_type" : "transaction-type-send"
+  } ],
+  "valuation_chart" : {
+    "-LS9xKKNlKAs5S_mMEWm" : {
+      "timestamp" : 1543150851473,
+      "value" : 10.034682863080462
+    },
+    "-LS9xLEM4qhvtq_fEYJN" : {
+      "timestamp" : 1543150855185,
+      "value" : 10.034682863080462
+    },
+    "-LS9xM7_1u0tU8AOuUsQ" : {
+      "timestamp" : 1543150858846,
+      "value" : 10.034682863080462
+    },
+    "-LS9xN1hWgmsUpl5UhRt" : {
+      "timestamp" : 1543150862566,
+      "value" : 10.034682863080462
+    },
+    "-LS9xO8MFUC4ceFlwXOf" : {
+      "timestamp" : 1543150867088,
+      "value" : 10.04200022732297
+    },
+    "-LS9xP1qjCDSBoxmk0O9" : {
+      "timestamp" : 1543150870767,
+      "value" : 10.04200022732297
+    },
+    "-LS9xPw0_qVfetAIHB1E" : {
+      "timestamp" : 1543150874426,
+      "value" : 10.04200022732297
+    },
+    "-LS9xQpRvocvsZFTRLCA" : {
+      "timestamp" : 1543150878101,
+      "value" : 10.04200022732297
+    },
+    "-LS9xRkQjR8yJoNhiacw" : {
+      "timestamp" : 1543150881876,
+      "value" : 10.04200022732297
+    },
+    "-LS9xSet8xTH9eDWBoxP" : {
+      "timestamp" : 1543150885618,
+      "value" : 10.04200022732297
+    },
+    "-LS9xTZJ5yhJrjkzIBbm" : {
+      "timestamp" : 1543150889293,
+      "value" : 10.04200022732297
+    },
+    "-LS9xUSi-GUAXnT-52bE" : {
+      "timestamp" : 1543150892968,
+      "value" : 10.04200022732297
+    },
+    "-LS9xVRVbN9hILlh3_CI" : {
+      "timestamp" : 1543150896985,
+      "value" : 10.04200022732297
+    },
+    "-LS9xWLMQ608F2h42j2W" : {
+      "timestamp" : 1543150900688,
+      "value" : 10.04200022732297
+    },
+    "-LS9xXFZDR498vncHGs3" : {
+      "timestamp" : 1543150904413,
+      "value" : 10.04200022732297
+    },
+    "-LS9xYA2H2nZTxTsqvI8" : {
+      "timestamp" : 1543150908156,
+      "value" : 10.04200022732297
+    },
+    "-LS9xZ5XIsHuFrjYftTJ" : {
+      "timestamp" : 1543150911963,
+      "value" : 10.04200022732297
+    },
+    "-LS9x_-XwQBUHmgSvhlk" : {
+      "timestamp" : 1543150915675,
+      "value" : 10.04200022732297
+    },
+    "-LS9x_ucrzmM3Px0dxec" : {
+      "timestamp" : 1543150919393,
+      "value" : 10.04200022732297
+    },
+    "-LS9xaoMXs1vUpl0zqCZ" : {
+      "timestamp" : 1543150923088,
+      "value" : 10.04200022732297
+    },
+    "-LS9xbleSQQLhZPuEXYl" : {
+      "timestamp" : 1543150927011,
+      "value" : 10.038411561770708
+    },
+    "-LS9xcf4xhS5BKdu1JFq" : {
+      "timestamp" : 1543150930686,
+      "value" : 10.038411561770708
+    },
+    "-LS9xdesvI2c1-phi_FI" : {
+      "timestamp" : 1543150934769,
+      "value" : 10.038411561770708
+    },
+    "-LS9xeZ_7LoubmGwfChX" : {
+      "timestamp" : 1543150938462,
+      "value" : 10.038411561770708
+    },
+    "-LS9xfUnfGiWyxCYuSvY" : {
+      "timestamp" : 1543150942252,
+      "value" : 10.038411561770708
+    },
+    "-LS9xgRpL2Rbz7CHsulu" : {
+      "timestamp" : 1543150946158,
+      "value" : 10.038411561770708
+    },
+    "-LS9xhN8sIrZvd4-TgDI" : {
+      "timestamp" : 1543150949954,
+      "value" : 10.038411561770708
+    },
+    "-LS9xiGIlx3FxcR8TyiX" : {
+      "timestamp" : 1543150953613,
+      "value" : 10.038411561770708
+    },
+    "-LS9xjHSLU7Gj0YBP2bd" : {
+      "timestamp" : 1543150957782,
+      "value" : 10.038411561770708
+    },
+    "-LS9xkAp93wVXnQ0HL8B" : {
+      "timestamp" : 1543150961454,
+      "value" : 10.038411561770708
+    },
+    "-LS9xl5PY8xnb3M3N8xm" : {
+      "timestamp" : 1543150965204,
+      "value" : 10.038411561770708
+    },
+    "-LS9xm-1QwzLgS_7Da4l" : {
+      "timestamp" : 1543150968891,
+      "value" : 10.038411561770708
+    },
+    "-LS9xmUxobZjrk5gtU_h" : {
+      "timestamp" : 1543150970934,
+      "value" : 10.038411561770708
+    },
+    "-LS9xmvxYu7Vjnj6eiDH" : {
+      "timestamp" : 1543150972726,
+      "value" : 10.038411561770708
+    },
+    "-LS9xnOTWY89ijDptmMG" : {
+      "timestamp" : 1543150974615,
+      "value" : 10.038411561770708
+    },
+    "-LS9xnqYXO9gipeJuuHI" : {
+      "timestamp" : 1543150976476,
+      "value" : 10.038411561770708
+    },
+    "-LS9xoL48tRIw7MotpZM" : {
+      "timestamp" : 1543150978494,
+      "value" : 10.038411561770708
+    },
+    "-LS9xojplAIKTOf_ITq6" : {
+      "timestamp" : 1543150980142,
+      "value" : 10.038411561770708
+    },
+    "-LS9xpFqay1VC7v38Xjr" : {
+      "timestamp" : 1543150982255,
+      "value" : 10.038411561770708
+    },
+    "-LS9xpeDBpoqA3PemWy9" : {
+      "timestamp" : 1543150983879,
+      "value" : 10.038411561770708
+    },
+    "-LS9xqPctJgotCILyVAd" : {
+      "timestamp" : 1543150986977,
+      "value" : 10.038411561770708
+    },
+    "-LS9xqaR93ogeTAUX6-K" : {
+      "timestamp" : 1543150987734,
+      "value" : 10.034054663614851
+    },
+    "-LS9xrJZRdZVjD4o9FZr" : {
+      "timestamp" : 1543150990685,
+      "value" : 10.034054663614851
+    },
+    "-LS9xrV3GIKrUH8W7ghm" : {
+      "timestamp" : 1543150991421,
+      "value" : 10.034054663614851
+    },
+    "-LS9xsCsp2t0jCwcRnNA" : {
+      "timestamp" : 1543150994353,
+      "value" : 10.034054663614851
+    },
+    "-LS9xsOHuy4CMsq8eJ5L" : {
+      "timestamp" : 1543150995084,
+      "value" : 10.034054663614851
+    },
+    "-LS9xt85wWo-TL9Z18Fg" : {
+      "timestamp" : 1543150998143,
+      "value" : 10.034054663614851
+    },
+    "-LS9xtIWGvivDfGXfQQT" : {
+      "timestamp" : 1543150998810,
+      "value" : 10.034054663614851
+    },
+    "-LS9xu1PtesNr6_HMATP" : {
+      "timestamp" : 1543151001812,
+      "value" : 10.034054663614851
+    },
+    "-LS9xuEVXc-PafKwWFpB" : {
+      "timestamp" : 1543151002649,
+      "value" : 10.034054663614851
+    },
+    "-LS9xuwmNF7C3NlgTlDX" : {
+      "timestamp" : 1543151005548,
+      "value" : 10.034054663614851
+    },
+    "-LS9xv8593TJWSAPaUjZ" : {
+      "timestamp" : 1543151006335,
+      "value" : 10.034054663614851
+    },
+    "-LS9xvqvmjkLNngH4jfl" : {
+      "timestamp" : 1543151009268,
+      "value" : 10.034054663614851
+    },
+    "-LS9xw1K54ooWisCXhu5" : {
+      "timestamp" : 1543151009998,
+      "value" : 10.034054663614851
+    },
+    "-LS9xwnqEnLQjissi0Ea" : {
+      "timestamp" : 1543151013167,
+      "value" : 10.034054663614851
+    },
+    "-LS9xwvJ2ctOMaKBkK8z" : {
+      "timestamp" : 1543151013645,
+      "value" : 10.034054663614851
+    },
+    "-LS9xxhBLW9qQ-pI8XXM" : {
+      "timestamp" : 1543151016837,
+      "value" : 10.034054663614851
+    },
+    "-LS9xxrz7dZ5rw8KUK03" : {
+      "timestamp" : 1543151017528,
+      "value" : 10.034054663614851
+    },
+    "-LS9xybje91XT--9G0tT" : {
+      "timestamp" : 1543151020584,
+      "value" : 10.034054663614851
+    },
+    "-LS9xym2na5Em6txTuyu" : {
+      "timestamp" : 1543151021244,
+      "value" : 10.034054663614851
+    },
+    "-LS9xzW5JQk6FQ55r4_p" : {
+      "timestamp" : 1543151024255,
+      "value" : 10.034054663614851
+    },
+    "-LS9xzgKt5YftNO9ovQs" : {
+      "timestamp" : 1543151024974,
+      "value" : 10.034054663614851
+    },
+    "-LS9y-QldMizvFmke38-" : {
+      "timestamp" : 1543151028010,
+      "value" : 10.034054663614851
+    },
+    "-LS9y-bfMc7muwBAhHgA" : {
+      "timestamp" : 1543151028772,
+      "value" : 10.034054663614851
+    },
+    "-LS9y0K-tA76Y6h-mIDL" : {
+      "timestamp" : 1543151031673,
+      "value" : 10.034054663614851
+    },
+    "-LS9y0YLXg1VX5YmueKr" : {
+      "timestamp" : 1543151032591,
+      "value" : 10.034054663614851
+    },
+    "-LS9y1DlTCaFNq8OBqJO" : {
+      "timestamp" : 1543151035370,
+      "value" : 10.034054663614851
+    },
+    "-LS9y1RcbG_gHKpOiYXO" : {
+      "timestamp" : 1543151036257,
+      "value" : 10.034054663614851
+    },
+    "-LS9y2L2KorvPGQHZUSA" : {
+      "timestamp" : 1543151039932,
+      "value" : 10.034054663614851
+    },
+    "-LS9y2L3GpEnAscUksUQ" : {
+      "timestamp" : 1543151039933,
+      "value" : 10.034054663614851
+    },
+    "-LS9y3EIysKT1GzgJTHO" : {
+      "timestamp" : 1543151043596,
+      "value" : 10.034054663614851
+    },
+    "-LS9y3EJMCAmJ6O4U1ML" : {
+      "timestamp" : 1543151043597,
+      "value" : 10.034054663614851
+    },
+    "-LS9y4BB3xFsAtRmpmty" : {
+      "timestamp" : 1543151047493,
+      "value" : 10.033835891765673
+    },
+    "-LS9y4BB3xFsAtRmpmtz" : {
+      "timestamp" : 1543151047493,
+      "value" : 10.033835891765673
+    },
+    "-LS9y54jVexKyvAUGK_R" : {
+      "timestamp" : 1543151051176,
+      "value" : 10.033835891765673
+    },
+    "-LS9y54jVexKyvAUGK_S" : {
+      "timestamp" : 1543151051176,
+      "value" : 10.033835891765673
+    },
+    "-LS9y5zLo4eNYgBuCf6e" : {
+      "timestamp" : 1543151054863,
+      "value" : 10.033835891765673
+    },
+    "-LS9y5zLo4eNYgBuCf6f" : {
+      "timestamp" : 1543151054863,
+      "value" : 10.033835891765673
+    },
+    "-LS9y6syEXSmRcPAFzd0" : {
+      "timestamp" : 1543151058551,
+      "value" : 10.033835891765673
+    },
+    "-LS9y6szWvnyTkVFn49z" : {
+      "timestamp" : 1543151058552,
+      "value" : 10.033835891765673
+    },
+    "-LS9y7mJmjsdLwqo5E1Y" : {
+      "timestamp" : 1543151062221,
+      "value" : 10.033835891765673
+    },
+    "-LS9y7mLkU9RshitmAsB" : {
+      "timestamp" : 1543151062223,
+      "value" : 10.033835891765673
+    },
+    "-LS9y8jLYwPmJmfoQst1" : {
+      "timestamp" : 1543151066127,
+      "value" : 10.033835891765673
+    },
+    "-LS9y8jLYwPmJmfoQst2" : {
+      "timestamp" : 1543151066127,
+      "value" : 10.033835891765673
+    },
+    "-LS9y9dc5WiUtemzn3kQ" : {
+      "timestamp" : 1543151069857,
+      "value" : 10.033835891765673
+    },
+    "-LS9y9ddoXZpA_cjKzfS" : {
+      "timestamp" : 1543151069858,
+      "value" : 10.033835891765673
+    },
+    "-LS9yAXqnOkyrRHb1iWe" : {
+      "timestamp" : 1543151073519,
+      "value" : 10.033835891765673
+    },
+    "-LS9yAXrOCkPpBnVuHhN" : {
+      "timestamp" : 1543151073520,
+      "value" : 10.033835891765673
+    },
+    "-LS9yBRfT2tJm7vCIX2A" : {
+      "timestamp" : 1543151077220,
+      "value" : 10.033835891765673
+    },
+    "-LS9yBRfT2tJm7vCIX2B" : {
+      "timestamp" : 1543151077221,
+      "value" : 10.033835891765673
+    },
+    "-LS9yCTLRWBBlD-zxyv6" : {
+      "timestamp" : 1543151081423,
+      "value" : 10.033835891765673
+    },
+    "-LS9yCTLRWBBlD-zxyv7" : {
+      "timestamp" : 1543151081423,
+      "value" : 10.033835891765673
+    },
+    "-LS9yDMa-S9br-A8E1OV" : {
+      "timestamp" : 1543151085087,
+      "value" : 10.033835891765673
+    },
+    "-LS9yDMbHNWTmIrJmz-r" : {
+      "timestamp" : 1543151085088,
+      "value" : 10.033835891765673
+    },
+    "-LS9yEGbWjKO3OSE54wh" : {
+      "timestamp" : 1543151088800,
+      "value" : 10.033835891765673
+    },
+    "-LS9yEGbWjKO3OSE54wi" : {
+      "timestamp" : 1543151088800,
+      "value" : 10.033835891765673
+    },
+    "-LS9yF0uDuE5Mybxt_cR" : {
+      "timestamp" : 1543151091891,
+      "value" : 10.033835891765673
+    },
+    "-LS9yFAOiAuKvNOldcFE" : {
+      "timestamp" : 1543151092498,
+      "value" : 10.033835891765673
+    },
+    "-LS9yFAOiAuKvNOldcFF" : {
+      "timestamp" : 1543151092498,
+      "value" : 10.033835891765673
+    },
+    "-LS9yFvLYV6kfK3Pjbbv" : {
+      "timestamp" : 1543151095567,
+      "value" : 10.033835891765673
+    },
+    "-LS9yG3nBXbCMv18ZBpt" : {
+      "timestamp" : 1543151096172,
+      "value" : 10.033835891765673
+    },
+    "-LS9yG3nBXbCMv18ZBpu" : {
+      "timestamp" : 1543151096172,
+      "value" : 10.033835891765673
+    },
+    "-LS9yGsERfRqGzkfgUma" : {
+      "timestamp" : 1543151099464,
+      "value" : 10.033835891765673
+    },
+    "-LS9yGyCRwx2hwBooZRE" : {
+      "timestamp" : 1543151099846,
+      "value" : 10.033835891765673
+    },
+    "-LS9yGyCRwx2hwBooZRF" : {
+      "timestamp" : 1543151099846,
+      "value" : 10.033835891765673
+    },
+    "-LS9yHlVHxGPbz_UznP_" : {
+      "timestamp" : 1543151103129,
+      "value" : 10.033835891765673
+    },
+    "-LS9yHrRuAbLyJD9mRN5" : {
+      "timestamp" : 1543151103509,
+      "value" : 10.033835891765673
+    },
+    "-LS9yHrRuAbLyJD9mRN6" : {
+      "timestamp" : 1543151103510,
+      "value" : 10.033835891765673
+    },
+    "-LS9yIfJP9X9XT4sBG5f" : {
+      "timestamp" : 1543151106829,
+      "value" : 10.033835891765673
+    },
+    "-LS9yIiQ-tyWuLOvqUVk" : {
+      "timestamp" : 1543151107028,
+      "value" : 10.033835891765673
+    },
+    "-LS9yIiQ-tyWuLOvqUVl" : {
+      "timestamp" : 1543151107028,
+      "value" : 10.033835891765673
+    },
+    "-LS9yJ_gNHqPrpeoCK7k" : {
+      "timestamp" : 1543151110565,
+      "value" : 10.033835891765673
+    },
+    "-LS9yJcHDo5F-gsDNzkd" : {
+      "timestamp" : 1543151110731,
+      "value" : 10.033835891765673
+    },
+    "-LS9yJcIDgj1IILdSxLv" : {
+      "timestamp" : 1543151110732,
+      "value" : 10.033835891765673
+    },
+    "-LS9yKVRBS8HV66GyjPy" : {
+      "timestamp" : 1543151114325,
+      "value" : 10.033835891765673
+    },
+    "-LS9yKahzQWaB_3h69MP" : {
+      "timestamp" : 1543151114726,
+      "value" : 10.034587500992359
+    },
+    "-LS9yKahzQWaB_3h69MQ" : {
+      "timestamp" : 1543151114726,
+      "value" : 10.034587500992359
+    },
+    "-LS9yLOfhpROfmCjZPlk" : {
+      "timestamp" : 1543151117988,
+      "value" : 10.034587500992359
+    },
+    "-LS9yLVCsq9Ek47suqQA" : {
+      "timestamp" : 1543151118406,
+      "value" : 10.034587500992359
+    },
+    "-LS9yLVCsq9Ek47suqQB" : {
+      "timestamp" : 1543151118406,
+      "value" : 10.034587500992359
+    },
+    "-LS9yMIcxpsTuhSRpOlk" : {
+      "timestamp" : 1543151121697,
+      "value" : 10.034587500992359
+    },
+    "-LS9yMP7ooqAV0xe68PC" : {
+      "timestamp" : 1543151122113,
+      "value" : 10.034587500992359
+    },
+    "-LS9yMP7ooqAV0xe68PD" : {
+      "timestamp" : 1543151122113,
+      "value" : 10.034587500992359
+    },
+    "-LS9yNCNBqGgq8jHJEc5" : {
+      "timestamp" : 1543151125393,
+      "value" : 10.034587500992359
+    },
+    "-LS9yNITHOTuHYfubemQ" : {
+      "timestamp" : 1543151125783,
+      "value" : 10.034587500992359
+    },
+    "-LS9yNITHOTuHYfubemR" : {
+      "timestamp" : 1543151125783,
+      "value" : 10.034587500992359
+    },
+    "-LS9yO6_g9eEaCFzecJp" : {
+      "timestamp" : 1543151129118,
+      "value" : 10.034587500992359
+    },
+    "-LS9yO8Ww8q6PyMulRKV" : {
+      "timestamp" : 1543151129242,
+      "value" : 10.034587500992359
+    },
+    "-LS9yO8Ww8q6PyMulRKW" : {
+      "timestamp" : 1543151129242,
+      "value" : 10.034587500992359
+    },
+    "-LS9yP3EbaHj60-6FKkE" : {
+      "timestamp" : 1543151133000,
+      "value" : 10.034587500992359
+    },
+    "-LS9yP3EbaHj60-6FKkF" : {
+      "timestamp" : 1543151133000,
+      "value" : 10.034587500992359
+    },
+    "-LS9yP4w3EMGfZyZ9gLB" : {
+      "timestamp" : 1543151133109,
+      "value" : 10.034587500992359
+    },
+    "-LS9yPyFTAPAfkBhX28c" : {
+      "timestamp" : 1543151136713,
+      "value" : 10.034587500992359
+    },
+    "-LS9yPyFTAPAfkBhX28d" : {
+      "timestamp" : 1543151136713,
+      "value" : 10.034587500992359
+    },
+    "-LS9yQ0TNdTlxb5kT23o" : {
+      "timestamp" : 1543151136919,
+      "value" : 10.034587500992359
+    },
+    "-LS9yQrkrlTOXTHOw9_6" : {
+      "timestamp" : 1543151140393,
+      "value" : 10.034587500992359
+    },
+    "-LS9yQrl2YKtMGppxqhm" : {
+      "timestamp" : 1543151140394,
+      "value" : 10.034587500992359
+    },
+    "-LS9yQvnDEOZAC8wYZKI" : {
+      "timestamp" : 1543151140652,
+      "value" : 10.034587500992359
+    },
+    "-LS9yRlkKH9gyO_OtHgq" : {
+      "timestamp" : 1543151144105,
+      "value" : 10.034587500992359
+    },
+    "-LS9yRlkKH9gyO_OtHgr" : {
+      "timestamp" : 1543151144105,
+      "value" : 10.034587500992359
+    },
+    "-LS9yRoB6NpCoYCgUYPn" : {
+      "timestamp" : 1543151144261,
+      "value" : 10.034587500992359
+    },
+    "-LS9ySvWetPrMkMYd3a1" : {
+      "timestamp" : 1543151148826,
+      "value" : 10.034587500992359
+    },
+    "-LS9ySvXgYJZ9b65Znoo" : {
+      "timestamp" : 1543151148827,
+      "value" : 10.034587500992359
+    },
+    "-LS9ySvXgYJZ9b65Znop" : {
+      "timestamp" : 1543151148827,
+      "value" : 10.034587500992359
+    },
+    "-LS9yTpc4HpPC5MRZEp0" : {
+      "timestamp" : 1543151152545,
+      "value" : 10.034587500992359
+    },
+    "-LS9yTpc4HpPC5MRZEp1" : {
+      "timestamp" : 1543151152545,
+      "value" : 10.034587500992359
+    },
+    "-LS9yTpdbkAro2SBYRiI" : {
+      "timestamp" : 1543151152546,
+      "value" : 10.034587500992359
+    },
+    "-LS9yUjTLwgeqxvWCTvH" : {
+      "timestamp" : 1543151156249,
+      "value" : 10.034587500992359
+    },
+    "-LS9yUjVU--KWPD9JgCx" : {
+      "timestamp" : 1543151156249,
+      "value" : 10.034587500992359
+    },
+    "-LS9yUjWku2JO_VjJja-" : {
+      "timestamp" : 1543151156250,
+      "value" : 10.034587500992359
+    },
+    "-LS9yVd77sEv7g1n4zB8" : {
+      "timestamp" : 1543151159937,
+      "value" : 10.034587500992359
+    },
+    "-LS9yVd77sEv7g1n4zB9" : {
+      "timestamp" : 1543151159937,
+      "value" : 10.034587500992359
+    },
+    "-LS9yVd893kmgbemhjTQ" : {
+      "timestamp" : 1543151159938,
+      "value" : 10.034587500992359
+    },
+    "-LS9yW_aIgNAPbKwWNIZ" : {
+      "timestamp" : 1543151163807,
+      "value" : 10.034587500992359
+    },
+    "-LS9yW_bFscxMCL5-Wsr" : {
+      "timestamp" : 1543151163808,
+      "value" : 10.034587500992359
+    },
+    "-LS9yW_cF2bkhTr6wIUk" : {
+      "timestamp" : 1543151163809,
+      "value" : 10.034587500992359
+    },
+    "-LS9yXYBW8Y5-y8TaBzT" : {
+      "timestamp" : 1543151167749,
+      "value" : 10.034587500992359
+    },
+    "-LS9yXYBW8Y5-y8TaBzU" : {
+      "timestamp" : 1543151167749,
+      "value" : 10.034587500992359
+    },
+    "-LS9yXYCOSFIO_kB56y7" : {
+      "timestamp" : 1543151167750,
+      "value" : 10.034587500992359
+    },
+    "-LS9yYRrmbE0estmi0WK" : {
+      "timestamp" : 1543151171440,
+      "value" : 10.034587500992359
+    },
+    "-LS9yYRs0V2TrM_fJgXr" : {
+      "timestamp" : 1543151171441,
+      "value" : 10.034587500992359
+    },
+    "-LS9yYRtVoC9qEBlJ_ti" : {
+      "timestamp" : 1543151171442,
+      "value" : 10.034587500992359
+    },
+    "-LS9yZM34eu-iSyspcFG" : {
+      "timestamp" : 1543151175165,
+      "value" : 10.034587500992359
+    },
+    "-LS9yZM34eu-iSyspcFH" : {
+      "timestamp" : 1543151175165,
+      "value" : 10.034587500992359
+    },
+    "-LS9yZM34eu-iSyspcFI" : {
+      "timestamp" : 1543151175165,
+      "value" : 10.034587500992359
+    },
+    "-LS9y_HRpIk-QVf731eS" : {
+      "timestamp" : 1543151178965,
+      "value" : 10.031391023998992
+    },
+    "-LS9y_HRpIk-QVf731eT" : {
+      "timestamp" : 1543151178965,
+      "value" : 10.031391023998992
+    },
+    "-LS9y_HSYUNOhXszpquc" : {
+      "timestamp" : 1543151178966,
+      "value" : 10.031391023998992
+    },
+    "-LS9yaAkrRrgx8SDn2pl" : {
+      "timestamp" : 1543151182633,
+      "value" : 10.031391023998992
+    },
+    "-LS9yaAlxJISQdK4hP_G" : {
+      "timestamp" : 1543151182634,
+      "value" : 10.031391023998992
+    },
+    "-LS9yaAlxJISQdK4hP_H" : {
+      "timestamp" : 1543151182634,
+      "value" : 10.031391023998992
+    },
+    "-LS9yb8KzHPZuyg_FpqB" : {
+      "timestamp" : 1543151186574,
+      "value" : 10.031391023998992
+    },
+    "-LS9yb8LHPUK-BCjyHCj" : {
+      "timestamp" : 1543151186575,
+      "value" : 10.031391023998992
+    },
+    "-LS9yb8LHPUK-BCjyHCk" : {
+      "timestamp" : 1543151186575,
+      "value" : 10.031391023998992
+    },
+    "-LS9yc1mSyr5EhGkpnXx" : {
+      "timestamp" : 1543151190251,
+      "value" : 10.031391023998992
+    },
+    "-LS9yc1mSyr5EhGkpnXy" : {
+      "timestamp" : 1543151190252,
+      "value" : 10.031391023998992
+    },
+    "-LS9yc1oBTSk1Eof_9Uv" : {
+      "timestamp" : 1543151190253,
+      "value" : 10.031391023998992
+    },
+    "-LS9ycy6e0tMAPoVisgZ" : {
+      "timestamp" : 1543151194048,
+      "value" : 10.031391023998992
+    },
+    "-LS9ycy8XcWDp_kJoFLa" : {
+      "timestamp" : 1543151194050,
+      "value" : 10.031391023998992
+    },
+    "-LS9ycy8XcWDp_kJoFLb" : {
+      "timestamp" : 1543151194050,
+      "value" : 10.031391023998992
+    },
+    "-LS9ydrQVoY8uaOCgvqB" : {
+      "timestamp" : 1543151197716,
+      "value" : 10.031391023998992
+    },
+    "-LS9ydrQVoY8uaOCgvqC" : {
+      "timestamp" : 1543151197716,
+      "value" : 10.031391023998992
+    },
+    "-LS9ydrQVoY8uaOCgvqD" : {
+      "timestamp" : 1543151197716,
+      "value" : 10.031391023998992
+    },
+    "-LS9yekvn1uyj-WTFU8Y" : {
+      "timestamp" : 1543151201396,
+      "value" : 10.031391023998992
+    },
+    "-LS9yekvn1uyj-WTFU8Z" : {
+      "timestamp" : 1543151201396,
+      "value" : 10.031391023998992
+    },
+    "-LS9yekwah0w2SxBhS8r" : {
+      "timestamp" : 1543151201397,
+      "value" : 10.031391023998992
+    },
+    "-LS9yfeOXXnr3En9SKDG" : {
+      "timestamp" : 1543151205074,
+      "value" : 10.031391023998992
+    },
+    "-LS9yfeOXXnr3En9SKDH" : {
+      "timestamp" : 1543151205074,
+      "value" : 10.031391023998992
+    },
+    "-LS9yfePCq8zpfqPvSf5" : {
+      "timestamp" : 1543151205075,
+      "value" : 10.031391023998992
+    },
+    "-LS9yg_FNqbIys82465b" : {
+      "timestamp" : 1543151208841,
+      "value" : 10.031391023998992
+    },
+    "-LS9yg_GDEy-M937FQpG" : {
+      "timestamp" : 1543151208842,
+      "value" : 10.031391023998992
+    },
+    "-LS9yg_GDEy-M937FQpH" : {
+      "timestamp" : 1543151208842,
+      "value" : 10.031391023998992
+    },
+    "-LS9yhTZoxLG4e35p1e3" : {
+      "timestamp" : 1543151212510,
+      "value" : 10.031391023998992
+    },
+    "-LS9yhT_V0iOwXoTme1U" : {
+      "timestamp" : 1543151212510,
+      "value" : 10.031391023998992
+    },
+    "-LS9yhT_V0iOwXoTme1V" : {
+      "timestamp" : 1543151212510,
+      "value" : 10.031391023998992
+    },
+    "-LS9yiN0d_wB6waysNKC" : {
+      "timestamp" : 1543151216186,
+      "value" : 10.031391023998992
+    },
+    "-LS9yiN0d_wB6waysNKD" : {
+      "timestamp" : 1543151216186,
+      "value" : 10.031391023998992
+    },
+    "-LS9yiN1ttD9JUHCNsEH" : {
+      "timestamp" : 1543151216187,
+      "value" : 10.031391023998992
+    },
+    "-LS9yjGXyq7c_gyIlYP7" : {
+      "timestamp" : 1543151219867,
+      "value" : 10.031391023998992
+    },
+    "-LS9yjGXyq7c_gyIlYP8" : {
+      "timestamp" : 1543151219867,
+      "value" : 10.031391023998992
+    },
+    "-LS9yjGYiNiZgb7RM6JZ" : {
+      "timestamp" : 1543151219868,
+      "value" : 10.031391023998992
+    },
+    "-LS9ykHDKyyri1enYoyl" : {
+      "timestamp" : 1543151224007,
+      "value" : 10.031391023998992
+    },
+    "-LS9ykHDKyyri1enYoym" : {
+      "timestamp" : 1543151224007,
+      "value" : 10.031391023998992
+    },
+    "-LS9ykHEvCjw0Ibik7mX" : {
+      "timestamp" : 1543151224008,
+      "value" : 10.031391023998992
+    },
+    "-LS9ylAZ5XevodSnnlkT" : {
+      "timestamp" : 1543151227678,
+      "value" : 10.031391023998992
+    },
+    "-LS9ylA_BBqTs0YZgfC6" : {
+      "timestamp" : 1543151227678,
+      "value" : 10.031391023998992
+    },
+    "-LS9ylAaT2GgYseg9OFf" : {
+      "timestamp" : 1543151227679,
+      "value" : 10.031391023998992
+    },
+    "-LS9ym4B35tvZYCHdN83" : {
+      "timestamp" : 1543151231365,
+      "value" : 10.031391023998992
+    },
+    "-LS9ym4B35tvZYCHdN84" : {
+      "timestamp" : 1543151231365,
+      "value" : 10.031391023998992
+    },
+    "-LS9ym4CjaioTgT9cPA7" : {
+      "timestamp" : 1543151231366,
+      "value" : 10.031391023998992
+    },
+    "-LS9ymzpcqNYC1zLSCEb" : {
+      "timestamp" : 1543151235118,
+      "value" : 10.031391023998992
+    },
+    "-LS9ymzpcqNYC1zLSCEc" : {
+      "timestamp" : 1543151235118,
+      "value" : 10.031391023998992
+    },
+    "-LS9ymzqND-mh72lVghB" : {
+      "timestamp" : 1543151235119,
+      "value" : 10.031391023998992
+    },
+    "-LS9ynyqqP_2vuT_fw5f" : {
+      "timestamp" : 1543151239151,
+      "value" : 10.030948896900414
+    },
+    "-LS9ynyrA3g_uD9t5xRW" : {
+      "timestamp" : 1543151239152,
+      "value" : 10.030948896900414
+    },
+    "-LS9ynyrA3g_uD9t5xRX" : {
+      "timestamp" : 1543151239152,
+      "value" : 10.030948896900414
+    },
+    "-LS9youOUg6znveRFx6r" : {
+      "timestamp" : 1543151242962,
+      "value" : 10.030948896900414
+    },
+    "-LS9youPgcZsTDxILaMM" : {
+      "timestamp" : 1543151242963,
+      "value" : 10.030948896900414
+    },
+    "-LS9youPgcZsTDxILaMN" : {
+      "timestamp" : 1543151242963,
+      "value" : 10.030948896900414
+    },
+    "-LS9ypnu6vwwdlYXrZ90" : {
+      "timestamp" : 1543151246643,
+      "value" : 10.030948896900414
+    },
+    "-LS9ypnu6vwwdlYXrZ91" : {
+      "timestamp" : 1543151246643,
+      "value" : 10.030948896900414
+    },
+    "-LS9ypnvicYyjPVu3uwy" : {
+      "timestamp" : 1543151246644,
+      "value" : 10.030948896900414
+    },
+    "-LS9yqhCAhzxyi-tQSey" : {
+      "timestamp" : 1543151250310,
+      "value" : 10.030948896900414
+    },
+    "-LS9yqhCAhzxyi-tQSez" : {
+      "timestamp" : 1543151250310,
+      "value" : 10.030948896900414
+    },
+    "-LS9yqhCAhzxyi-tQSf-" : {
+      "timestamp" : 1543151250310,
+      "value" : 10.030948896900414
+    },
+    "-LS9yrjvp9vLcxIR6hiy" : {
+      "timestamp" : 1543151254580,
+      "value" : 10.030948896900414
+    },
+    "-LS9yrjwSmSjgtvcHmKL" : {
+      "timestamp" : 1543151254581,
+      "value" : 10.030948896900414
+    },
+    "-LS9yrjwSmSjgtvcHmKM" : {
+      "timestamp" : 1543151254581,
+      "value" : 10.030948896900414
+    },
+    "-LS9ysmYSNbQAYiTafeo" : {
+      "timestamp" : 1543151258844,
+      "value" : 10.030948896900414
+    },
+    "-LS9ysmZ9cg-d7f9PHKS" : {
+      "timestamp" : 1543151258845,
+      "value" : 10.030948896900414
+    },
+    "-LS9ysmZ9cg-d7f9PHKT" : {
+      "timestamp" : 1543151258845,
+      "value" : 10.030948896900414
+    },
+    "-LS9ytguiddxDdthHm_x" : {
+      "timestamp" : 1543151262579,
+      "value" : 10.030948896900414
+    },
+    "-LS9ytgvrkvn_OqGZ2Mv" : {
+      "timestamp" : 1543151262580,
+      "value" : 10.030948896900414
+    },
+    "-LS9ytgvrkvn_OqGZ2Mw" : {
+      "timestamp" : 1543151262581,
+      "value" : 10.030948896900414
+    },
+    "-LS9yulEHYLtF-qfgZUk" : {
+      "timestamp" : 1543151266952,
+      "value" : 10.030948896900414
+    },
+    "-LS9yulFm1gN7bOySByY" : {
+      "timestamp" : 1543151266953,
+      "value" : 10.030948896900414
+    },
+    "-LS9yulGuITtRDkEaHlV" : {
+      "timestamp" : 1543151266954,
+      "value" : 10.030948896900414
+    },
+    "-LS9yvgM_oT6A-8YT8rX" : {
+      "timestamp" : 1543151270736,
+      "value" : 10.030948896900414
+    },
+    "-LS9yvgN-BXQNxEA556n" : {
+      "timestamp" : 1543151270737,
+      "value" : 10.030948896900414
+    },
+    "-LS9yvgN-BXQNxEA556o" : {
+      "timestamp" : 1543151270737,
+      "value" : 10.030948896900414
+    },
+    "-LS9ywdkKK8O_LdXgASF" : {
+      "timestamp" : 1543151274665,
+      "value" : 10.030948896900414
+    },
+    "-LS9ywdkKK8O_LdXgASG" : {
+      "timestamp" : 1543151274665,
+      "value" : 10.030948896900414
+    },
+    "-LS9ywdlvJ0_G7V5eaF6" : {
+      "timestamp" : 1543151274666,
+      "value" : 10.030948896900414
+    },
+    "-LS9yxY5RNZejIajZnRT" : {
+      "timestamp" : 1543151278335,
+      "value" : 10.030948896900414
+    },
+    "-LS9yxY5RNZejIajZnRU" : {
+      "timestamp" : 1543151278335,
+      "value" : 10.030948896900414
+    },
+    "-LS9yxY5RNZejIajZnRV" : {
+      "timestamp" : 1543151278335,
+      "value" : 10.030948896900414
+    },
+    "-LS9yyRt1iCDFdtJc2ol" : {
+      "timestamp" : 1543151282034,
+      "value" : 10.030948896900414
+    },
+    "-LS9yyRt1iCDFdtJc2om" : {
+      "timestamp" : 1543151282034,
+      "value" : 10.030948896900414
+    },
+    "-LS9yyRuFDFmA1_23BEV" : {
+      "timestamp" : 1543151282035,
+      "value" : 10.030948896900414
+    },
+    "-LS9yzNm5MBiV3pBvHul" : {
+      "timestamp" : 1543151285867,
+      "value" : 10.030948896900414
+    },
+    "-LS9yzNnMycVistaVXHy" : {
+      "timestamp" : 1543151285868,
+      "value" : 10.030948896900414
+    },
+    "-LS9yzNnMycVistaVXHz" : {
+      "timestamp" : 1543151285868,
+      "value" : 10.030948896900414
+    },
+    "-LS9z-IfvOUQUe-znYaU" : {
+      "timestamp" : 1543151289636,
+      "value" : 10.030948896900414
+    },
+    "-LS9z-IfvOUQUe-znYaV" : {
+      "timestamp" : 1543151289636,
+      "value" : 10.030948896900414
+    },
+    "-LS9z-IgRfNWkGUMuJoN" : {
+      "timestamp" : 1543151289637,
+      "value" : 10.030948896900414
+    },
+    "-LS9z0FXJeewhOMNXf1r" : {
+      "timestamp" : 1543151293531,
+      "value" : 10.030948896900414
+    },
+    "-LS9z0FXJeewhOMNXf1s" : {
+      "timestamp" : 1543151293531,
+      "value" : 10.030948896900414
+    },
+    "-LS9z0FY1HF7zZ_ltE7r" : {
+      "timestamp" : 1543151293532,
+      "value" : 10.030948896900414
+    },
+    "-LS9z19xuHQj2MO1s0JE" : {
+      "timestamp" : 1543151297270,
+      "value" : 10.030948896900414
+    },
+    "-LS9z19xuHQj2MO1s0JF" : {
+      "timestamp" : 1543151297270,
+      "value" : 10.030948896900414
+    },
+    "-LS9z19yVzS-OeZ90egp" : {
+      "timestamp" : 1543151297271,
+      "value" : 10.030948896900414
+    },
+    "-LS9z25hWgqNtR5ygRiZ" : {
+      "timestamp" : 1543151301094,
+      "value" : 10.028123196461944
+    },
+    "-LS9z25hWgqNtR5ygRi_" : {
+      "timestamp" : 1543151301094,
+      "value" : 10.028123196461944
+    },
+    "-LS9z25io5TEln06Eq2I" : {
+      "timestamp" : 1543151301095,
+      "value" : 10.028123196461944
+    },
+    "-LS9z2zzkNkn-gW9SsBZ" : {
+      "timestamp" : 1543151304760,
+      "value" : 10.028123196461944
+    },
+    "-LS9z2zzkNkn-gW9SsB_" : {
+      "timestamp" : 1543151304760,
+      "value" : 10.028123196461944
+    },
+    "-LS9z3--jlWnM1xhA2cE" : {
+      "timestamp" : 1543151304761,
+      "value" : 10.028123196461944
+    },
+    "-LS9z3teKtVKeLpeHoMP" : {
+      "timestamp" : 1543151308451,
+      "value" : 10.028123196461944
+    },
+    "-LS9z3teKtVKeLpeHoMQ" : {
+      "timestamp" : 1543151308451,
+      "value" : 10.028123196461944
+    },
+    "-LS9z3tfd4Tb9sYdi_yv" : {
+      "timestamp" : 1543151308452,
+      "value" : 10.028123196461944
+    },
+    "-LS9z4oOjoNrbEYds0LL" : {
+      "timestamp" : 1543151312210,
+      "value" : 10.028123196461944
+    },
+    "-LS9z4oOjoNrbEYds0LM" : {
+      "timestamp" : 1543151312210,
+      "value" : 10.028123196461944
+    },
+    "-LS9z4oPXgxDl7U-jWtt" : {
+      "timestamp" : 1543151312211,
+      "value" : 10.028123196461944
+    },
+    "-LS9z5kBASq2OHCnKbMB" : {
+      "timestamp" : 1543151316037,
+      "value" : 10.028123196461944
+    },
+    "-LS9z5kDHtJO0xHJsalH" : {
+      "timestamp" : 1543151316039,
+      "value" : 10.028123196461944
+    },
+    "-LS9z5kDHtJO0xHJsalI" : {
+      "timestamp" : 1543151316039,
+      "value" : 10.028123196461944
+    },
+    "-LS9z6dh2pWbXo7I7ZFv" : {
+      "timestamp" : 1543151319718,
+      "value" : 10.028123196461944
+    },
+    "-LS9z6diASam7o3IbKGc" : {
+      "timestamp" : 1543151319719,
+      "value" : 10.028123196461944
+    },
+    "-LS9z6diASam7o3IbKGd" : {
+      "timestamp" : 1543151319719,
+      "value" : 10.028123196461944
+    },
+    "-LS9z7Y9d5GcFil62VYI" : {
+      "timestamp" : 1543151323395,
+      "value" : 10.028123196461944
+    },
+    "-LS9z7Y9d5GcFil62VYJ" : {
+      "timestamp" : 1543151323395,
+      "value" : 10.028123196461944
+    },
+    "-LS9z7Y9d5GcFil62VYK" : {
+      "timestamp" : 1543151323396,
+      "value" : 10.028123196461944
+    },
+    "-LS9z8RtXkdLXDm_bsA-" : {
+      "timestamp" : 1543151327090,
+      "value" : 10.028123196461944
+    },
+    "-LS9z8RtXkdLXDm_bsA0" : {
+      "timestamp" : 1543151327090,
+      "value" : 10.028123196461944
+    },
+    "-LS9z8RuvLhxnX1eiE1z" : {
+      "timestamp" : 1543151327091,
+      "value" : 10.028123196461944
+    },
+    "-LS9z9SH7_6BG52ZOTF2" : {
+      "timestamp" : 1543151331211,
+      "value" : 10.028123196461944
+    },
+    "-LS9z9SI_Qs_FJDWh4Xk" : {
+      "timestamp" : 1543151331212,
+      "value" : 10.028123196461944
+    },
+    "-LS9z9SI_Qs_FJDWh4Xl" : {
+      "timestamp" : 1543151331212,
+      "value" : 10.028123196461944
+    },
+    "-LS9zAMcN9-RHMeiGJWl" : {
+      "timestamp" : 1543151334945,
+      "value" : 10.028123196461944
+    },
+    "-LS9zAMdmEnLK6pmK2kk" : {
+      "timestamp" : 1543151334946,
+      "value" : 10.028123196461944
+    },
+    "-LS9zAMdmEnLK6pmK2kl" : {
+      "timestamp" : 1543151334946,
+      "value" : 10.028123196461944
+    },
+    "-LS9zBG3VZY_ix5XDH5I" : {
+      "timestamp" : 1543151338621,
+      "value" : 10.028123196461944
+    },
+    "-LS9zBG4DadttjVXz-V1" : {
+      "timestamp" : 1543151338622,
+      "value" : 10.028123196461944
+    },
+    "-LS9zBG4DadttjVXz-V2" : {
+      "timestamp" : 1543151338622,
+      "value" : 10.028123196461944
+    },
+    "-LS9zC9TXfqcpI47F2n9" : {
+      "timestamp" : 1543151342295,
+      "value" : 10.028123196461944
+    },
+    "-LS9zC9U5yNEYEUHk6DS" : {
+      "timestamp" : 1543151342296,
+      "value" : 10.028123196461944
+    },
+    "-LS9zC9U5yNEYEUHk6DT" : {
+      "timestamp" : 1543151342296,
+      "value" : 10.028123196461944
+    },
+    "-LS9zD4i-88BTuFXG51L" : {
+      "timestamp" : 1543151346087,
+      "value" : 10.028123196461944
+    },
+    "-LS9zD4i-88BTuFXG51M" : {
+      "timestamp" : 1543151346087,
+      "value" : 10.028123196461944
+    },
+    "-LS9zD4jkdCXv0343Y4k" : {
+      "timestamp" : 1543151346088,
+      "value" : 10.028123196461944
+    },
+    "-LS9zE-JAwtAf_cP-Tb4" : {
+      "timestamp" : 1543151349837,
+      "value" : 10.028123196461944
+    },
+    "-LS9zE-JAwtAf_cP-Tb5" : {
+      "timestamp" : 1543151349837,
+      "value" : 10.028123196461944
+    },
+    "-LS9zE-JAwtAf_cP-Tb6" : {
+      "timestamp" : 1543151349837,
+      "value" : 10.028123196461944
+    },
+    "-LS9zEttH0uC2wOZ1L1s" : {
+      "timestamp" : 1543151353522,
+      "value" : 10.028123196461944
+    },
+    "-LS9zEtudyN2gZhyzzmb" : {
+      "timestamp" : 1543151353523,
+      "value" : 10.028123196461944
+    },
+    "-LS9zEtudyN2gZhyzzmc" : {
+      "timestamp" : 1543151353523,
+      "value" : 10.028123196461944
+    },
+    "-LS9zFnDDMxRrdg7enEO" : {
+      "timestamp" : 1543151357191,
+      "value" : 10.028123196461944
+    },
+    "-LS9zFnDDMxRrdg7enEP" : {
+      "timestamp" : 1543151357191,
+      "value" : 10.028123196461944
+    },
+    "-LS9zFnEFLhGo1-R9VxJ" : {
+      "timestamp" : 1543151357192,
+      "value" : 10.028123196461944
+    },
+    "-LS9zGicO-yavlBHZwHc" : {
+      "timestamp" : 1543151360993,
+      "value" : 10.026988770703673
+    },
+    "-LS9zGicO-yavlBHZwHd" : {
+      "timestamp" : 1543151360993,
+      "value" : 10.026988770703673
+    },
+    "-LS9zGicO-yavlBHZwHe" : {
+      "timestamp" : 1543151360993,
+      "value" : 10.026988770703673
+    },
+    "-LS9zHbp9G9ZRLowj2Bz" : {
+      "timestamp" : 1543151364654,
+      "value" : 10.026988770703673
+    },
+    "-LS9zHbp9G9ZRLowj2C-" : {
+      "timestamp" : 1543151364654,
+      "value" : 10.026988770703673
+    },
+    "-LS9zHbqvvxmzq8Cl1JR" : {
+      "timestamp" : 1543151364655,
+      "value" : 10.026988770703673
+    },
+    "-LS9zIqy26ICap4l3Fh6" : {
+      "timestamp" : 1543151369719,
+      "value" : 10.026988770703673
+    },
+    "-LS9zIqzMlegRg-Zl4o2" : {
+      "timestamp" : 1543151369720,
+      "value" : 10.026988770703673
+    },
+    "-LS9zIqzMlegRg-Zl4o3" : {
+      "timestamp" : 1543151369720,
+      "value" : 10.026988770703673
+    },
+    "-LS9zJkT9S07_2ENzqpA" : {
+      "timestamp" : 1543151373399,
+      "value" : 10.026988770703673
+    },
+    "-LS9zJkUT-I0LjlmhhEI" : {
+      "timestamp" : 1543151373400,
+      "value" : 10.026988770703673
+    },
+    "-LS9zJkUT-I0LjlmhhEJ" : {
+      "timestamp" : 1543151373400,
+      "value" : 10.026988770703673
+    },
+    "-LS9zKsT_M-q4yAWLI_H" : {
+      "timestamp" : 1543151378007,
+      "value" : 10.026988770703673
+    },
+    "-LS9zKsUwc8nWY5JQJ-N" : {
+      "timestamp" : 1543151378008,
+      "value" : 10.026988770703673
+    },
+    "-LS9zKsUwc8nWY5JQJ-O" : {
+      "timestamp" : 1543151378008,
+      "value" : 10.026988770703673
+    },
+    "-LS9zLllk2yJ7OZVud41" : {
+      "timestamp" : 1543151381674,
+      "value" : 10.026988770703673
+    },
+    "-LS9zLllk2yJ7OZVud42" : {
+      "timestamp" : 1543151381674,
+      "value" : 10.026988770703673
+    },
+    "-LS9zLllk2yJ7OZVud43" : {
+      "timestamp" : 1543151381675,
+      "value" : 10.026988770703673
+    },
+    "-LS9zMhWiLLitx25gXXw" : {
+      "timestamp" : 1543151385498,
+      "value" : 10.026988770703673
+    },
+    "-LS9zMhWiLLitx25gXXx" : {
+      "timestamp" : 1543151385498,
+      "value" : 10.026988770703673
+    },
+    "-LS9zMhXGjev2I-iaXmE" : {
+      "timestamp" : 1543151385499,
+      "value" : 10.026988770703673
+    }
+  }
+}
